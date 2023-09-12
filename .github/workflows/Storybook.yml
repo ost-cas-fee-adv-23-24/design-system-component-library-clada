@@ -1,22 +1,43 @@
-{
-  "compilerOptions": {
-    "declarationDir": "dist/types",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "declaration": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "rootDir": "src",
-    "baseUrl": ".",
-    "moduleResolution": "NodeNext",
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "jsx": "react",
-    "module": "esnext",
-    "target": "esnext"
-  },
-  "include": ["src/**/*"]
-}
+name: Deploy Storybook
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build storybook static
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: npm
+      - run: npm ci
+      - run: npm run build-storybook
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: storybook-static
+
+  deploy:
+    environment:
+      name: Storybook
+      url: ${{ steps.deployment.outputs.page_url }}
+    name: Deploy storybook to pages
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v1
