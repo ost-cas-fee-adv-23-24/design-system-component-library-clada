@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-export default function Button() {
-    return (<button className="text-blue-800">Hello World!</button>)
+export interface ButtonProps {
+    id: string
+}
+
+export const Button: FC<ButtonProps> = ({ id }) => {
+    return (<button id={id} className="text-blue-800">Hello World!</button>)
 }
