@@ -49,3 +49,7 @@ This project is licensed under the [MIT license agreement](./LICENSE)
 ## Contributing
 
 Since this is a school project please do not open any pull requests for this repository. 
+
+## TODO
+
+- Setup eslint
