@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Clada storybook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**clada-storybook** is a design system component library build with react, tailwind and typescript.
 
-## Available Scripts
+This project was built in the frame of the CAS Frontend Engineering Advanced course at the [OST Fachhochschule Rapperswil](https://www.ost.ch/de/).
 
-In the project directory, you can run:
+Authors/Developers:
+- Claudio Steffen
+- Danijel Malinovic
 
-### `npm start`
+## Installation and usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If you want to review the package first before using it in your project, you can open our [published storybook instance](https://ost-cas-fee-adv-23-24.github.io/design-system-component-library-clada/?path=/story/button--primary).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This package is intended to be used in a NextJS application. To install the package in your project simply run
+```bash
+npm install clada-storybook
+```
 
-### `npm test`
+After that, you need to import the stylesheet in your `globals.css` file:
+```css
+@import 'clada-storybook/style.css';
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Components that you want to use can be imported accordingly:
+```tsx
+import { Button } from 'clada-storybook';
+```
 
-### `npm run build`
+## Local setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To develop this application you ofcourse need node installed. For a seamless usage please use the version defined in the [node-version file](./.node-verion).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then you need to install all dependencies:
+```bash
+npm ci
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+And after that you can run
+```bash
+npm run storybook
+```
+This will start the storybook instance on port **6006** and should automatically open.
 
-### `npm run eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project is licensed under the [MIT license agreement](./LICENSE)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Since this is a school project please do not open any pull requests for this repository. 
