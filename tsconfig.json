@@ -1,22 +1,19 @@
 {
     "compilerOptions": {
+      "target": "es5",
       "declarationDir": "dist/types",
       "lib": ["dom", "dom.iterable", "esnext"],
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
-      "sourceMap": true,
       "declaration": true,
       "forceConsistentCasingInFileNames": true,
-      "outDir": "dist",
-      "rootDir": "src",
+      "rootDir": "src/",
       "baseUrl": ".",
-      "moduleResolution": "NodeNext",
       "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true,
       "allowJs": true,
       "jsx": "react",
-      "module": "esnext",
-      "target": "esnext"
     },
-    "include": ["src/**/*"]
+    "include": ["src/index.ts", "src/components/**/*", "../package.json", "../README.md"]
   }
