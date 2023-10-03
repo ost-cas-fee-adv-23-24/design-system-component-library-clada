@@ -1,8 +1,8 @@
 name: Release Clada Storybook NPM package
 on:
     push:
-        branches:
-            - 'main'
+        branches: [ 'main' ]
+
 jobs:
     release:
         name: test build and release
@@ -17,5 +17,5 @@ jobs:
             - name: semantic release
               uses: cycjimmy/semantic-release-action@v3
               env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                 NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
