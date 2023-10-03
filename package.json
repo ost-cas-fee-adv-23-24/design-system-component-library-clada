@@ -2,18 +2,17 @@
   "name": "clada-storybook",
   "version": "0.1.0",
   "private": false,
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "./esm/types/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/types/index.d.ts",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "build": "npm run build:clean && npm run build:project && npm run build:copy-files && npm run build:tailwind",
+    "build": "npm run build:clean && npm run build:project && npm run build:tailwind",
     "build:clean": "rm -rf dist",
     "build:project": "tsc -p ./tsconfig.esm.json && tsc -p ./tsconfig.cjs.json",
-    "build:copy-files": "cp ./package.json ./dist && cp ./README.md ./dist && cp ./LICENSE ./dist",
     "build:tailwind": "tailwindcss -i ./src/index.css -o ./dist/style.css --minify && cp ./tailwind.config.js ./dist",
     "test": "react-scripts test",
     "storybook": "storybook dev -p 6006",
@@ -22,16 +21,16 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./esm/types/index.d.ts",
-        "default": "./esm/index.js"
+        "types": "./dist/esm/types/index.d.ts",
+        "default": "./dist/esm/index.js"
       },
       "require": {
-        "types": "./cjs/types/index.d.ts",
+        "types": "./dist/cjs/types/index.d.ts",
         "default": "./cjs/index.cjs"
       }
     },
-    "./style.css": "./style.css",
-    "./tailwind.config.ts": "./tailwind.config.js"
+    "./style.css": "./dist/style.css",
+    "./tailwind.config.ts": "./dist/tailwind.config.js"
   },
   "eslintConfig": {
     "extends": [
