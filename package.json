@@ -31,7 +31,7 @@
       }
     },
     "./style.css": "./style.css",
-    "./tailwind.config.ts": "./tailwind.config.jss"
+    "./tailwind.config.ts": "./tailwind.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -86,5 +86,5 @@
     "branches": [
         "main"
     ]
-}
+  }
 }
