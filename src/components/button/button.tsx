@@ -5,5 +5,5 @@ export interface ButtonProps {
 }
 
 export const Button: FC<ButtonProps> = ({ id }) => {
-    return (<button id={id} className="text-blue-800">Hello World!</button>)
+    return (<button id={id} className="bg-primary-600 text-white">Hello World!</button>)
 }
