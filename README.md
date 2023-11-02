@@ -44,12 +44,28 @@ This will start the storybook instance on port **6006** and should automatically
 
 ## License
 
-This project is licensed under the [MIT license agreement](./LICENSE)
+This project is licensed under the [MIT license agreement](https://github.com/ost-cas-fee-adv-23-24/design-system-component-library-team-batman/blob/main/LICENSE)
+
+### Font
+
+This package uses the "Poppins" font, created by Indian Type Foundry and Jonny Pinhorn, and is licensed under the [Open Font License (OFL)](https://scripts.sil.org/OFL). 
+Below, you can find the necessary attribution and license information:
+
+#### Font Attribution
+
+The "Example Font" font used in this package is licensed under the Open Font License (OFL), and it is the work of John Doe.
+
+#### License
+
+This font is released under the [Open Font License (OFL)](https://scripts.sil.org/OFL).
+
+#### OFL Summary
+
+- **Font Name:** Poppins
+- **Designer:** Indian Type Foundry, Jonny Pinhorn
+- **License:** [Open Font License (OFL)](https://scripts.sil.org/OFL)
+
 
 ## Contributing
 
 Since this is a school project please do not open any pull requests for this repository. 
-
-## TODO
-
-- Setup eslint
