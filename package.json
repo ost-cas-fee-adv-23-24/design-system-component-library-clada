@@ -30,7 +30,7 @@
 		"build": "npm run build:clean && npm run build:project && npm run build:tailwind",
 		"build-storybook": "storybook build",
 		"build:clean": "rm -rf dist",
-		"build:project": "tsc -p ./tsconfig.esm.json && tsc -p ./tsconfig.cjs.json",
+		"build:project": "tsc -p ./tsconfig.esm.json && tsc -p ./tsconfig.cjs.json && mv ./dist/cjs/index.js ./dist/cjs/index.cjs",
 		"build:tailwind": "tailwindcss -i ./src/index.css -o ./dist/style.css --minify && cp ./tailwind.config.js ./dist",
 		"lint": "eslint src/**/*.ts src/**/*.tsx",
 		"prepare": "husky install",

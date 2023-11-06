@@ -47,6 +47,20 @@ module.exports = {
 			xl: '48px',
 			xxl: '64px',
 		},
+		borderWidth: {
+			1: '1px',
+			2: '2px',
+			3: '3px',
+			4: '4px',
+			6: '6px',
+		},
+		borderRadius: {
+			none: 0,
+			s: '8px',
+			m: '16px',
+			l: '24px',
+			full: '9999px',
+		},
 	},
 	plugins: [
 		/**

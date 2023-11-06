@@ -1,0 +1,65 @@
+import { Meta, Unstyled } from '@storybook/blocks';
+
+<Meta title="Foundation/Borders" />
+
+# Borders
+
+Borders provide a way to visually separate and define elements within the user interface. They help establish boundaries between components and create a sense of hierarchy and organization in the layout.
+
+## Border Width
+
+Standard border widths used for borders of components and elements, providing visual separation and definition.
+
+<Unstyled>
+	<div className="flex flex-wrap gap-m">
+		<div>
+			<div className="border rounded h-xxl w-xxl border-1 border-base-100 bg-primary-200"></div>
+			<div>1px</div>
+		</div>
+		<div>
+			<div className="border rounded h-xxl w-xxl border-2 border-base-100 bg-primary-200"></div>
+			<div>2px</div>
+		</div>
+		<div>
+			<div className="border rounded h-xxl w-xxl border-3 border-base-100 bg-primary-200"></div>
+			<div>3px</div>
+		</div>
+		<div>
+			<div className="border rounded h-xxl w-xxl border-4 border-base-100 bg-primary-200"></div>
+			<div>4px</div>
+		</div>
+		<div>
+			<div className="border rounded h-xxl w-xxl border-6 border-base-100 bg-primary-200"></div>
+			<div>6px</div>
+		</div>
+	</div>
+</Unstyled>
+
+## Border Radius
+
+The curvature of rounded corners for various elements, creating a softer and more friendly appearance.
+
+<Unstyled>
+	<div className="flex flex-col gap-m">
+		<div>
+			<div className="border h-xxl w-xxl border-3 border-base-100 bg-primary-200"></div>
+			<div>not rounded [no border-radius applied]</div>
+		</div>
+		<div>
+			<div className="border h-xxl w-xxl rounded-s border-3 border-base-100 bg-primary-200"></div>
+			<div>rounded-s</div>
+		</div>
+		<div>
+			<div className="border h-xxl w-xxl rounded-m border-3 border-base-100 bg-primary-200"></div>
+			<div>rounded-m</div>
+		</div>
+		<div>
+			<div className="border h-xxl w-xxl rounded-l border-3 border-base-100 bg-primary-200"></div>
+			<div>rounded-l</div>
+		</div>
+		<div>
+			<div className="border h-xxl w-xxl rounded-full border-3 border-base-100  bg-primary-200"></div>
+			<div>rounded-full</div>
+		</div>
+	</div>
+</Unstyled>
