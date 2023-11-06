@@ -1,95 +1,112 @@
 {
-  "name": "clada-storybook",
-  "version": "0.1.0",
-  "private": false,
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/types/index.d.ts",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "scripts": {
-    "build": "npm run build:clean && npm run build:project && npm run build:tailwind",
-    "build:clean": "rm -rf dist",
-    "build:project": "tsc -p ./tsconfig.esm.json && tsc -p ./tsconfig.cjs.json",
-    "build:tailwind": "tailwindcss -i ./src/index.css -o ./dist/style.css --minify && cp ./tailwind.config.js ./dist",
-    "lint": "eslint src/**/*.ts src/**/*.tsx",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "prepare": "husky install"
-  },
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/esm/types/index.d.ts",
-        "default": "./dist/esm/index.js"
-      },
-      "require": {
-        "types": "./dist/cjs/types/index.d.ts",
-        "default": "./cjs/index.cjs"
-      }
-    },
-    "./style.css": "./dist/style.css",
-    "./tailwind.config.ts": "./dist/tailwind.config.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:storybook/recommended"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "files": [
-    "dist",
-    "tailwind.config.js"
-  ],
-  "devDependencies": {
-    "@babel/preset-env": "^7.22.15",
-    "@babel/preset-react": "^7.22.15",
-    "@babel/preset-typescript": "^7.22.15",
-    "@storybook/addon-essentials": "^7.4.1",
-    "@storybook/addon-interactions": "^7.4.1",
-    "@storybook/addon-links": "^7.4.1",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addon-styling": "^1.3.7",
-    "@storybook/blocks": "^7.4.1",
-    "@storybook/react": "^7.4.1",
-    "@storybook/react-webpack5": "^7.4.1",
-    "@storybook/testing-library": "^0.2.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@typescript-eslint/eslint-plugin": "^6.8.0",
-    "@typescript-eslint/parser": "^6.8.0",
-    "autoprefixer": "^10.4.15",
-    "eslint": "^8.51.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-storybook": "^0.6.13",
-    "husky": "^8.0.3",
-    "postcss": "^8.4.29",
-    "prop-types": "^15.8.1",
-    "storybook": "^7.4.1",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2",
-    "web-vitals": "^2.1.4"
-  },
-  "release": {
-    "branches": [
-      "main"
-    ]
-  }
+	"name": "clada-storybook",
+	"version": "0.1.0",
+	"private": false,
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/esm/types/index.d.ts",
+				"default": "./dist/esm/index.js"
+			},
+			"require": {
+				"types": "./dist/cjs/types/index.d.ts",
+				"default": "./cjs/index.cjs"
+			}
+		},
+		"./style.css": "./dist/style.css",
+		"./tailwind.config.ts": "./dist/tailwind.config.js"
+	},
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.js",
+	"types": "./dist/esm/types/index.d.ts",
+	"files": [
+		"dist",
+		"tailwind.config.js"
+	],
+	"scripts": {
+		"#BUILD PACKAGE": "---",
+		"#STORYBOOK": "---",
+		"#UTILITIES": "---",
+		"build": "npm run build:clean && npm run build:project && npm run build:tailwind",
+		"build-storybook": "storybook build",
+		"build:clean": "rm -rf dist",
+		"build:project": "tsc -p ./tsconfig.esm.json && tsc -p ./tsconfig.cjs.json",
+		"build:tailwind": "tailwindcss -i ./src/index.css -o ./dist/style.css --minify && cp ./tailwind.config.js ./dist",
+		"lint": "eslint src/**/*.ts src/**/*.tsx",
+		"prepare": "husky install",
+		"prettier": "prettier . --write",
+		"storybook": "storybook dev -p 6006"
+	},
+	"lint-staged": {
+		"*.{css,mdx,json,ts,tsx}": [
+			"prettier --write"
+		],
+		"*.{ts,tsx}": [
+			"eslint --max-warnings 0",
+			"bash -c tsc --noEmit"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest",
+			"plugin:storybook/recommended"
+		]
+	},
+	"release": {
+		"branches": [
+			"main"
+		]
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.22.15",
+		"@babel/preset-react": "^7.22.15",
+		"@babel/preset-typescript": "^7.22.15",
+		"@storybook/addon-essentials": "^7.4.1",
+		"@storybook/addon-interactions": "^7.4.1",
+		"@storybook/addon-links": "^7.4.1",
+		"@storybook/addon-onboarding": "^1.0.8",
+		"@storybook/addon-postcss": "^2.0.0",
+		"@storybook/addon-styling": "^1.3.7",
+		"@storybook/blocks": "^7.4.1",
+		"@storybook/react": "^7.4.1",
+		"@storybook/react-webpack5": "^7.4.1",
+		"@storybook/testing-library": "^0.2.0",
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"@typescript-eslint/eslint-plugin": "^6.8.0",
+		"@typescript-eslint/parser": "^6.8.0",
+		"autoprefixer": "^10.4.15",
+		"eslint": "^8.51.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-storybook": "^0.6.13",
+		"husky": "^8.0.3",
+		"lint-staged": "^15.0.2",
+		"postcss": "^8.4.29",
+		"prettier": "3.0.3",
+		"prettier-plugin-packagejson": "2.4.5",
+		"prettier-plugin-tailwindcss": "^0.5.5",
+		"prop-types": "^15.8.1",
+		"storybook": "^7.4.1",
+		"tailwindcss": "^3.3.3",
+		"typescript": "^5.2.2",
+		"web-vitals": "^2.1.4"
+	}
 }
