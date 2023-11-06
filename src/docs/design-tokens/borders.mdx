@@ -1,0 +1,66 @@
+import {Meta, Unstyled} from '@storybook/blocks';
+
+<Meta title="Foundation/Borders"/>
+
+# Borders
+
+Borders provide a way to visually separate and define elements within the user interface. They help establish boundaries between components and create a sense of hierarchy and organization in the layout.
+
+
+## Border Width
+
+Standard border widths used for borders of components and elements, providing visual separation and definition.
+
+<Unstyled>
+    <div className="flex flex-wrap gap-m">
+        <div>
+            <div className="w-xxl h-xxl bg-primary-200 border border-base-100 border-1 rounded"></div>
+            <div>1px</div>
+        </div>
+        <div>
+            <div className="w-xxl h-xxl bg-primary-200 border border-base-100 border-2 rounded"></div>
+            <div>2px</div>
+        </div>
+        <div>
+            <div className="w-xxl h-xxl bg-primary-200 border border-base-100 border-3 rounded"></div>
+            <div>3px</div>
+        </div>
+        <div>
+            <div className="w-xxl h-xxl bg-primary-200 border border-base-100 border-4 rounded"></div>
+            <div>4px</div>
+        </div>
+        <div>
+            <div className="w-xxl h-xxl bg-primary-200 border border-base-100 border-6 rounded"></div>
+            <div>6px</div>
+        </div>
+    </div>
+</Unstyled>
+
+## Border Radius
+
+The curvature of rounded corners for various elements, creating a softer and more friendly appearance.
+
+<Unstyled>
+    <div className="flex flex-col gap-m">
+        <div>
+            <div className="w-xxl h-xxl border bg-primary-200 border-base-100 border-3"></div>
+            <div>not rounded [no border-radius applied]</div>
+        </div>
+        <div>
+            <div className="w-xxl h-xxl border bg-primary-200 border-base-100 border-3 rounded-s"></div>
+            <div>rounded-s</div>
+        </div>
+        <div>
+            <div className="w-xxl h-xxl border bg-primary-200 border-base-100 border-3 rounded-m"></div>
+            <div>rounded-m</div>
+        </div>
+        <div>
+            <div className="w-xxl h-xxl border bg-primary-200 border-base-100 border-3 rounded-l"></div>
+            <div>rounded-l</div>
+        </div>
+        <div>
+            <div className="w-xxl h-xxl border bg-primary-200 border-base-100 border-3  rounded-full"></div>
+            <div>rounded-full</div>
+        </div>
+    </div>
+</Unstyled>
