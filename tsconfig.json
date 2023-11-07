@@ -1,19 +1,19 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "declarationDir": "dist/types",
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "declaration": true,
-      "forceConsistentCasingInFileNames": true,
-      "rootDir": "src/",
-      "baseUrl": ".",
-      "allowSyntheticDefaultImports": true,
-      "resolveJsonModule": true,
-      "allowJs": true,
-      "jsx": "react",
-    },
-    "include": ["src/index.ts", "src/components/**/*", "../package.json", "../README.md"]
-  }
+	"compilerOptions": {
+		"target": "es5",
+		"declarationDir": "dist/types",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"declaration": true,
+		"forceConsistentCasingInFileNames": true,
+		"rootDir": "src/",
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"jsx": "react"
+	},
+	"include": ["src/index.ts", "src/components/**/*", "../package.json", "../README.md"]
+}
