@@ -1,87 +1,3 @@
-/* // src/stories/Icon.stories.js
-
-import React from 'react';
-import CheckIcon from './check';
-import CancelIcon from './cancel';
-import RepostIcon from './repost';
-import TimeIcon from './time';
-import MumbleIcon from './mumble';
-import FullscreenIcon from './fullscreen';
-import SendIcon from './send';
-
-
-export default {
-	title: 'Components/Icons',
-	component: CheckIcon,
-	argTypes: {
-		size: {
-			options: ['s', 'm', 'l'],
-			control: { type: 'radio' },
-		},
-		color: {
-			options: ['slate', 'white'],
-			control: { type: 'radio' },
-		},
-	},
-};
-
-const CheckTemplate = (args) => <CheckIcon {...args} />;
-
-export const Checkmark = CheckTemplate.bind({});
-Checkmark.args = {
-	size: 's', // Default size
-	color: 'slate', // Default color
-};
-
-const CancelTemplate = (args) => <CancelIcon {...args} />;
-
-export const Cancel = CancelTemplate.bind({});
-Cancel.args = {
-	size: 's', // Default size
-	color: 'slate', // Default color
-};
-
-const RepostTemplate = (args) => <RepostIcon {...args} />;
-
-export const Repost = RepostTemplate.bind({});
-Repost.args = {
-	size: 's', // Default size
-	color: 'slate', // Default color
-};
-
-
-const TimeTemplate = (args) => <TimeIcon {...args} />;
-
-export const Time = TimeTemplate.bind({});
-Time.args = {
-	size: 's', // Default size
-	color: 'slate', // Default color
-};
-
-const MumbleTemplate = (args) => <MumbleIcon {...args} />;
-
-export const Mumble = MumbleTemplate.bind({});
-Mumble.args = {
-	size: 's', // Default size
-	color: 'slate', // Default color
-};
-
-const FullscreenTemplate = (args) => <FullscreenIcon {...args} />;
-
-export const Fullscreen = FullscreenTemplate.bind({});
-Fullscreen.args = {
-	size: 's', // Default size
-	color: 'slate', // Default color
-};
-
-const SendTemplate = (args) => <SendIcon {...args} />;
-
-export const Send = SendTemplate.bind({});
-Send.args = {
-	size: 's', // Default size
-	color: 'slate', // Default color
-}; */
-
 import React from 'react';
 import CheckIcon from './check';
 import CancelIcon from './cancel';
@@ -98,9 +14,10 @@ import EyeIcon from './eye'; // Import EyeIcon
 import SettingsIcon from './settings'; // Import SettingsIcon
 import LogoutIcon from './logout'; // Import LogoutIcon
 import CalendarIcon from './calendar'; // Import CalendarIcon
+import HeartIcon from './heart';
 
 export default {
-  title: 'Components/Icons',
+  title: 'Components/Icons-Simple',
   component: CheckIcon,
   argTypes: {
     size: {
@@ -109,6 +26,10 @@ export default {
     },
     color: {
       options: ['slate', 'white'],
+      control: { type: 'radio' },
+    },
+    filled: {
+      options: [false, true],
       control: { type: 'radio' },
     },
   },
@@ -129,6 +50,9 @@ const EyeTemplate = (args) => <EyeIcon {...args} />;
 const SettingsTemplate = (args) => <SettingsIcon {...args} />;
 const LogoutTemplate = (args) => <LogoutIcon {...args} />;
 const CalendarTemplate = (args) => <CalendarIcon {...args} />;
+const HeartTemplate = (args) => <HeartIcon {...args} />;
+
+
 
 export const Checkmark = CheckTemplate.bind({});
 export const Cancel = CancelTemplate.bind({});
@@ -145,6 +69,7 @@ export const Eye = EyeTemplate.bind({});
 export const Settings = SettingsTemplate.bind({});
 export const Logout = LogoutTemplate.bind({});
 export const Calendar = CalendarTemplate.bind({});
+export const Heart = HeartTemplate.bind({});
 
 // Set default args for all components
 Checkmark.args = {
@@ -207,3 +132,10 @@ Calendar.args = {
   size: 's',
   color: 'slate',
 };
+
+Heart.args = {
+  size: 's',
+  color: 'slate',
+  filled: 'false'
+};
+
