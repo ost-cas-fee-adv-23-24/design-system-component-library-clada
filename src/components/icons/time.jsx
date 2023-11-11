@@ -1,17 +1,5 @@
 import React from 'react';
-
-const getSizeClass = (size) => {
-  switch (size) {
-    case 's':
-      return 'w-s h-s'; // Small size
-    case 'm':
-      return 'w-m h-m'; // Medium size
-    case 'l':
-      return 'w-l h-l'; // Large size
-    default:
-      return 'w-s h-s'; // Default size
-  }
-};
+import { getSizeClass, getColorClass } from './iconUtils';
 
 const TimeIcon = ({ size, color }) => {
   const svgClasses = getSizeClass(size);

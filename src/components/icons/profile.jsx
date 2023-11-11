@@ -1,28 +1,5 @@
 import React from 'react';
-
-const getSizeClass = (size) => {
-  switch (size) {
-    case 's':
-      return 'w-s h-s'; // Small size
-    case 'm':
-      return 'w-m h-m'; // Medium size
-    case 'l':
-      return 'w-l h-l'; // Large size
-    default:
-      return 'w-s h-s'; // Default size
-  }
-};
-
-const getColorClass = (color) => {
-  switch (color) {
-    case 'slate':
-      return 'fill-slate-600'; // Slate color
-    case 'white':
-      return 'fill-white'; // White color
-    default:
-      return 'fill-slate-600'; // Default color (Slate)
-  }
-};
+import { getSizeClass, getColorClass } from './iconUtils';
 
 const ProfileIcon = ({ size, color }) => {
   const svgClasses = getSizeClass(size);
