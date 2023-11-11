@@ -12,7 +12,7 @@ module.exports = {
 			error: '#FF0000',
 			primary: colors.violet,
 			secondary: colors.pink,
-			base: colors.slate,
+			base: colors.slate
 		},
 		fontFamily: {
 			default: ['Poppins', 'Arial', 'sans-serif'],

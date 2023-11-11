@@ -13,11 +13,15 @@ export const getSizeClass = (size) => {
 
 export const getColorClass = (color) => {
 	switch (color) {
-		case 'slate':
-			return 'fill-slate-600'; // Small size
+		case 'base':
+			return 'fill-base-600';
+		case 'secondary':
+			return 'fill-secondary-600';
+		case 'primary':
+			return 'fill-primary-600'; 
 		case 'white':
-			return 'fill-white'; // Medium size
+			return 'fill-white'; 
 		default:
-			return 'fill-slate-600'; // Default size
+			return 'fill-slate-600'; // Default
 	}
 };
