@@ -11,7 +11,7 @@ export default {
       control: { type: 'radio' },
     },
     color: {
-      options: ['slate', 'white'],
+      options: ['base', 'white', 'primary', 'secondary'],
       control: { type: 'radio' },
     },
     filled: {

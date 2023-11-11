@@ -1,8 +1,9 @@
 import React from 'react';
+import { getSizeClass, getColorClass } from './iconUtils';
 
 const HeartIcon = ({ size, color, filled }) => {
-  const svgClasses = `w-${size} h-${size}`;
-  const pathClasses = `fill-${color}`;
+	const svgClasses = getSizeClass(size);
+	const pathClasses = getColorClass(color);
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className={svgClasses}>

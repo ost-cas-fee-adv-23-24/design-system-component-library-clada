@@ -69,7 +69,7 @@ export default {
       control: { type: 'radio' },
     },
     color: {
-      options: ['base', 'white', 'secondary', 'primary'],
+      options: ['base', 'white', 'primary', 'secondary'],
       control: { type: 'radio' },
     }
   },
