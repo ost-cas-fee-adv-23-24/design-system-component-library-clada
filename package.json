@@ -25,17 +25,17 @@
 	],
 	"scripts": {
 		"#BUILD PACKAGE": "---",
-		"#STORYBOOK": "---",
-		"#UTILITIES": "---",
 		"build": "npm run build:clean && npm run build:project && npm run build:tailwind",
-		"build-storybook": "storybook build",
 		"build:clean": "rm -rf dist",
 		"build:project": "tsc -p ./tsconfig.esm.json && tsc -p ./tsconfig.cjs.json && mv ./dist/cjs/index.js ./dist/cjs/index.cjs",
 		"build:tailwind": "tailwindcss -i ./src/index.css -o ./dist/style.css --minify && cp ./tailwind.config.js ./dist",
+		"#STORYBOOK": "---",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build",
+		"#UTILITIES": "---",
 		"lint": "eslint src/**/*.ts src/**/*.tsx",
 		"prepare": "husky install",
-		"prettier": "prettier . --write",
-		"storybook": "storybook dev -p 6006"
+		"prettier": "prettier . --write"
 	},
 	"lint-staged": {
 		"*.{css,mdx,json,ts,tsx}": [
@@ -71,6 +71,10 @@
 		]
 	},
 	"dependencies": {
+		"@headlessui/react": "^1.7.17",
+		"@headlessui/tailwindcss": "^0.2.0",
+		"classnames": "^2.3.2",
+		"framer-motion": "^10.16.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},

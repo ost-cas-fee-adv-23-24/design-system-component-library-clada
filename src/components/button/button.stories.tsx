@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from './button';
 
 const meta: Meta<typeof Button> = {
-	title: 'Component/Button',
+	title: 'Components/Button',
 	component: Button,
 };
 
