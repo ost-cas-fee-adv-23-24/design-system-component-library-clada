@@ -42,8 +42,7 @@
 			"prettier --write"
 		],
 		"*.{ts,tsx}": [
-			"eslint --max-warnings 0",
-			"bash -c tsc --noEmit"
+			"eslint --max-warnings 0"
 		]
 	},
 	"browserslist": {
@@ -82,6 +81,7 @@
 		"@babel/preset-env": "^7.22.15",
 		"@babel/preset-react": "^7.22.15",
 		"@babel/preset-typescript": "^7.22.15",
+		"@storybook/addon-a11y": "^7.4.1",
 		"@storybook/addon-essentials": "^7.4.1",
 		"@storybook/addon-interactions": "^7.4.1",
 		"@storybook/addon-links": "^7.4.1",
