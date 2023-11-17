@@ -4,7 +4,7 @@ import ReplyIcon from './reply';
 import { FillableIconProps } from './iconUtils';
 
 export default {
-	title: 'Components/Icons-Fillable',
+	title: 'Components/Icons',
 	component: HeartIcon,
 	argTypes: {
 		size: {

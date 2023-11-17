@@ -62,7 +62,7 @@ export const Logout = createTemplate(iconComponents.Logout);
 export const Calendar = createTemplate(iconComponents.Calendar);
 
 export default {
-	title: 'Components/Icons-Simple',
+	title: 'Components/Icons',
 	component: CheckIcon,
 	argTypes: {
 		size: {

@@ -3,7 +3,7 @@ import ArrowIcon from './arrow';
 import { RotatableIconProps } from './iconUtils';
 
 export default {
-	title: 'Components/Icons-Arrow',
+	title: 'Components/Icons',
 	component: ArrowIcon,
 	argTypes: {
 		size: {
