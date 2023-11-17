@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import CheckIcon from './check';
 import CancelIcon from './cancel';
 import RepostIcon from './repost';
@@ -14,34 +14,35 @@ import EyeIcon from './eye';
 import SettingsIcon from './settings';
 import LogoutIcon from './logout';
 import CalendarIcon from './calendar';
+import { IconProps } from './iconUtils';
 
 const iconComponents = {
-  Checkmark: CheckIcon,
-  Cancel: CancelIcon,
-  Repost: RepostIcon,
-  Time: TimeIcon,
-  Mumble: MumbleIcon,
-  Fullscreen: FullscreenIcon,
-  Send: SendIcon,
-  Edit: EditIcon,
-  Location: LocationIcon,
-  Share: ShareIcon,
-  Profile: ProfileIcon,
-  Eye: EyeIcon,
-  Settings: SettingsIcon,
-  Logout: LogoutIcon,
-  Calendar: CalendarIcon
+	Checkmark: CheckIcon,
+	Cancel: CancelIcon,
+	Repost: RepostIcon,
+	Time: TimeIcon,
+	Mumble: MumbleIcon,
+	Fullscreen: FullscreenIcon,
+	Send: SendIcon,
+	Edit: EditIcon,
+	Location: LocationIcon,
+	Share: ShareIcon,
+	Profile: ProfileIcon,
+	Eye: EyeIcon,
+	Settings: SettingsIcon,
+	Logout: LogoutIcon,
+	Calendar: CalendarIcon,
 };
 
-const defaultArgs = {
-  size: 's',
-  color: 'base'
+const defaultArgs: IconProps = {
+	size: 's',
+	color: 'base',
 };
 
-const createTemplate = (IconComponent) => {
-  const Template = (args) => <IconComponent {...args} />;
-  Template.args = { ...defaultArgs };
-  return Template;
+const createTemplate = (IconComponent: FC<IconProps>) => {
+	const Template = (args: IconProps) => <IconComponent {...args} />;
+	Template.args = { ...defaultArgs };
+	return Template;
 };
 
 export const Checkmark = createTemplate(iconComponents.Checkmark);
@@ -61,16 +62,16 @@ export const Logout = createTemplate(iconComponents.Logout);
 export const Calendar = createTemplate(iconComponents.Calendar);
 
 export default {
-  title: 'Components/Icons-Simple',
-  component: CheckIcon, 
-  argTypes: {
-    size: {
-      options: ['s', 'm', 'l'],
-      control: { type: 'radio' },
-    },
-    color: {
-      options: ['base', 'white', 'primary', 'secondary'],
-      control: { type: 'radio' },
-    }
-  },
+	title: 'Components/Icons-Simple',
+	component: CheckIcon,
+	argTypes: {
+		size: {
+			options: ['s', 'm', 'l'],
+			control: { type: 'radio' },
+		},
+		color: {
+			options: ['base', 'white', 'primary', 'secondary', 'error'],
+			control: { type: 'radio' },
+		},
+	},
 };
