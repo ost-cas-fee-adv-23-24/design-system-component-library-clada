@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { getSizeClass, getColorClass, FillableIconProps } from './iconUtils';
 
-const ReplyIcon: FC<FillableIconProps> = ({ size, color, filled }) => {
+export const ReplyIcon: FC<FillableIconProps> = ({ size, color, filled }) => {
 	const svgClasses = getSizeClass(size);
 	const pathClasses = getColorClass(color);
 

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { getSizeClass, getColorClass, IconProps } from './iconUtils';
 
-const ShareIcon: FC<IconProps> = ({ size, color }) => {
+export const ShareIcon: FC<IconProps> = ({ size, color }) => {
 	const svgClasses = getSizeClass(size);
 	const pathClasses = getColorClass(color);
 

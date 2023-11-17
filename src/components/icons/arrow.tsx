@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { getSizeClass, getColorClass, RotatableIconProps } from './iconUtils';
 
-const ArrowIcon: FC<RotatableIconProps> = ({ size, color, direction }) => {
+export const ArrowIcon: FC<RotatableIconProps> = ({ size, color, direction }) => {
 	const svgClasses = `${getSizeClass(size)} ${getColorClass(color)}`;
 
 	// Function to get Tailwind rotation class based on direction

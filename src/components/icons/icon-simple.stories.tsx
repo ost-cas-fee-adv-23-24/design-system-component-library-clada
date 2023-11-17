@@ -16,7 +16,7 @@ import LogoutIcon from './logout';
 import CalendarIcon from './calendar';
 import { IconProps } from './iconUtils';
 
-const iconComponents = {
+export const iconComponents = {
 	Checkmark: CheckIcon,
 	Cancel: CancelIcon,
 	Repost: RepostIcon,

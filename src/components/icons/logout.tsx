@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { getSizeClass, getColorClass, IconProps } from './iconUtils';
 
-const LogoutIcon: FC<IconProps> = ({ size, color }) => {
+export const LogoutIcon: FC<IconProps> = ({ size, color }) => {
 	const svgClasses = getSizeClass(size);
 	const pathClasses = getColorClass(color);
 
