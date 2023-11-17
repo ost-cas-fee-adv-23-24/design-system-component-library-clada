@@ -1,13 +1,13 @@
 export const getSizeClass = (size: 's' | 'm' | 'l') => {
 	switch (size) {
 		case 's':
-			return 'w-s h-s'; // Small size
+			return 'w-s h-s';
 		case 'm':
-			return 'w-m h-m'; // Medium size
+			return 'w-m h-m';
 		case 'l':
-			return 'w-l h-l'; // Large size
+			return 'w-l h-l';
 		default:
-			return 'w-s h-s'; // Default size
+			return 'w-s h-s';
 	}
 };
 
@@ -24,7 +24,7 @@ export const getColorClass = (color: 'base' | 'white' | 'primary' | 'secondary' 
 		case 'error':
 			return 'fill-error';
 		default:
-			return 'fill-slate-600'; // Default
+			return 'fill-slate-600';
 	}
 };
 
