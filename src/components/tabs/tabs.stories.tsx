@@ -15,12 +15,12 @@ export const Default: Story = {
 	args: {
 		tabs: [
 			{
-				text: 'Deine Mumbles',
-				onClick: () => console.log('clicked tab 1'),
+				text: 'Option 1',
+				onClick: () => console.log('clicked option 1'),
 			},
 			{
-				text: 'Deine Likes',
-				onClick: () => console.log('clicked tab 2'),
+				text: 'Option 2',
+				onClick: () => console.log('clicked option 2'),
 			},
 		],
 	},
@@ -30,7 +30,7 @@ export const OneItem: Story = {
 	args: {
 		tabs: [
 			{
-				text: 'Deine Mumbles',
+				text: 'One Option',
 				onClick: () => console.log('clicked'),
 			},
 		],
@@ -41,16 +41,16 @@ export const ThreeItems: Story = {
 	args: {
 		tabs: [
 			{
-				text: 'Deine Mumbles',
-				onClick: () => console.log('clicked'),
+				text: 'Option 1',
+				onClick: () => console.log('clicked option 1'),
 			},
 			{
-				text: 'Deine Likes',
-				onClick: () => console.log('clicked'),
+				text: 'Option 2 with longer text',
+				onClick: () => console.log('clicked option 2'),
 			},
 			{
-				text: 'Deine Follower',
-				onClick: () => console.log('clicked'),
+				text: 'Option 3',
+				onClick: () => console.log('clicked option 3'),
 			},
 		],
 	},
@@ -60,17 +60,17 @@ export const PreselectTab: Story = {
 	args: {
 		tabs: [
 			{
-				text: 'Deine Mumbles',
-				onClick: () => console.log('clicked'),
+				text: 'Option 1',
+				onClick: () => console.log('clicked option 1'),
 			},
 			{
-				text: 'Deine Likes',
-				onClick: () => console.log('clicked tab 2'),
+				text: 'Option 2',
+				onClick: () => console.log('clicked option 2'),
 				selected: true,
 			},
 			{
-				text: 'Deine Follower',
-				onClick: () => console.log('clicked tab 3'),
+				text: 'Option 3',
+				onClick: () => console.log('clicked option 3'),
 			},
 		],
 	},
