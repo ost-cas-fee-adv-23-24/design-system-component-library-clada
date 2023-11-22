@@ -25,25 +25,24 @@
 	],
 	"scripts": {
 		"#BUILD PACKAGE": "---",
-		"#STORYBOOK": "---",
-		"#UTILITIES": "---",
 		"build": "npm run build:clean && npm run build:project && npm run build:tailwind",
-		"build-storybook": "storybook build",
 		"build:clean": "rm -rf dist",
 		"build:project": "tsc -p ./tsconfig.esm.json && tsc -p ./tsconfig.cjs.json && mv ./dist/cjs/index.js ./dist/cjs/index.cjs",
 		"build:tailwind": "tailwindcss -i ./src/index.css -o ./dist/style.css --minify && cp ./tailwind.config.js ./dist",
+		"#STORYBOOK": "---",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build",
+		"#UTILITIES": "---",
 		"lint": "eslint src/**/*.ts src/**/*.tsx",
 		"prepare": "husky install",
-		"prettier": "prettier . --write",
-		"storybook": "storybook dev -p 6006"
+		"prettier": "prettier . --write"
 	},
 	"lint-staged": {
 		"*.{css,mdx,json,ts,tsx}": [
 			"prettier --write"
 		],
 		"*.{ts,tsx}": [
-			"eslint --max-warnings 0",
-			"bash -c tsc --noEmit"
+			"eslint --max-warnings 0"
 		]
 	},
 	"browserslist": {
@@ -71,7 +70,10 @@
 		]
 	},
 	"dependencies": {
+		"@headlessui/react": "^1.7.17",
+		"@headlessui/tailwindcss": "^0.2.0",
 		"classnames": "^2.3.2",
+		"framer-motion": "^10.16.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
@@ -79,6 +81,7 @@
 		"@babel/preset-env": "^7.22.15",
 		"@babel/preset-react": "^7.22.15",
 		"@babel/preset-typescript": "^7.22.15",
+		"@storybook/addon-a11y": "^7.4.1",
 		"@storybook/addon-essentials": "^7.4.1",
 		"@storybook/addon-interactions": "^7.4.1",
 		"@storybook/addon-links": "^7.4.1",
