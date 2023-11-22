@@ -2,11 +2,12 @@ import React, { forwardRef, useState } from 'react';
 import { EyeIcon } from '../icons';
 import { Input, InputProps } from './input';
 
+// For the Password input we do not need all properties.
+// Therefor we create this interface and only expose the not needed properties
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface IInputPasswordProps extends Omit<InputProps, 'Icon' | 'type' | 'onIconClick'> {}
+export interface InputPasswordProps extends Omit<InputProps, 'Icon' | 'type' | 'onIconClick'> {}
 
-// eslint-disable-next-line react/display-name
-export const InputPassword = forwardRef<HTMLInputElement, IInputPasswordProps>(({ ...rest }, ref) => {
+export const InputPassword = forwardRef<HTMLInputElement, InputPasswordProps>(({ ...rest }, ref) => {
 	const [showPassword, setShowPassword] = useState<boolean>(false);
 
 	return (
