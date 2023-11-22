@@ -3,7 +3,7 @@ import { EyeIcon } from '../icons';
 import { Input, InputProps } from './input';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface IInputPasswordProps extends Omit<InputProps, 'icon' | 'type' | 'onIconClick'> {}
+export interface IInputPasswordProps extends Omit<InputProps, 'Icon' | 'type' | 'onIconClick'> {}
 
 // eslint-disable-next-line react/display-name
 export const InputPassword = forwardRef<HTMLInputElement, IInputPasswordProps>(({ ...rest }, ref) => {
