@@ -38,15 +38,6 @@ module.exports = {
 			semiBold: '600',
 			bold: '700',
 		},
-		spacing: {
-			xxs: '4px',
-			xs: '8px',
-			s: '16px',
-			m: '24px',
-			l: '32px',
-			xl: '48px',
-			xxl: '64px',
-		},
 		borderWidth: {
 			1: '1px',
 			2: '2px',
@@ -61,6 +52,17 @@ module.exports = {
 			l: '24px',
 			full: '9999px',
 		},
+		extend: {
+			spacing: {
+				xxs: '4px',
+				xs: '8px',
+				s: '16px',
+				m: '24px',
+				l: '32px',
+				xl: '48px',
+				xxl: '64px'
+			}
+		},
 	},
 	plugins: [
 		/**
@@ -69,6 +71,28 @@ module.exports = {
 		 */
 		plugin(function ({ addUtilities, theme }) {
 			addUtilities({
+				'.mb-border-shadow-hover-base': {
+                    transition: 'box-shadow 0.2s',
+                    '&:hover': {
+                        boxShadow: `0 0 0 3px ${theme('colors.base.100')}`,
+                    },
+                },
+                '.mb-border-shadow-active-base': {
+                    '&:active': {
+                        boxShadow: `0 0 0 4px ${theme('colors.base.200')}`,
+                    },
+                },
+				'.mb-border-shadow-hover-primary': {
+                    transition: 'box-shadow 0.2s',
+                    '&:hover': {
+                        boxShadow: `0 0 0 3px ${theme('colors.primary.100')}`,
+                    },
+                },
+                '.mb-border-shadow-active-primary': {
+                    '&:active': {
+                        boxShadow: `0 0 0 4px ${theme('colors.primary.200')}`,
+                    },
+                },
 				'.mb-bg-gradient': {
 					background: `linear-gradient(90deg, ${theme('colors.secondary.500')} 0%, ${theme(
 						'colors.primary.600',
