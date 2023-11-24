@@ -29,7 +29,7 @@ export const Button: FC<ButtonProps> = ({ label, onClick, color, size, icon, noL
 				colorClasses[color],
 				noLabel ? 'rounded-full px-s' : 'rounded-s',
 			)}>
-			{!noLabel && <span className={size === 'l' ? 'mr-3' : 'ml-xs'}>{label}</span>}
+			{!noLabel && <span className={size === 'l' ? 'mr-3' : 'mr-xs'}>{label}</span>}
 			{icon}
 		</button>
 	);
