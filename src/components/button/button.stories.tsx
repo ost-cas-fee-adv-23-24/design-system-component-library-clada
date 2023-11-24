@@ -59,7 +59,17 @@ export const WithIcon: Story = {
 	args: {
 		label: 'Button with Icon',
 		onClick: () => console.log('Button with Icon clicked'),
-		icon: <MumbleIcon color="white" size="s" />, // Replace with the actual icon you want to use
+		icon: <MumbleIcon color="white" size="s" />,
 		color: 'secondary',
+	},
+};
+
+export const NoLabelButton: Story = {
+	args: {
+		onClick: () => console.log('No Label Button clicked'),
+		color: 'base',
+		noLabel: true,
+		size: 'l',
+		icon: <MumbleIcon color="white" size="s" />,
 	},
 };
