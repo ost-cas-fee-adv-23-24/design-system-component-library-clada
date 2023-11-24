@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
-import { MumbleIcon } from '../icons'; // Assuming MumbleIcon is one of your icons
+import { MumbleIcon } from '../icons';
 import React from 'react';
 
 const meta: Meta<typeof Button> = {
@@ -13,27 +13,27 @@ type Story = StoryObj<typeof meta>;
 
 export default meta;
 
-export const Slate: Story = {
+export const Base: Story = {
 	args: {
-		label: 'Slate Button',
-		onClick: () => console.log('Slate Button clicked'),
-		color: 'slate',
+		label: 'Base Button',
+		onClick: () => console.log('Base Button clicked'),
+		color: 'base',
 	},
 };
 
-export const Violet: Story = {
+export const Primary: Story = {
 	args: {
-		label: 'Violet Button',
-		onClick: () => console.log('Violet Button clicked'),
-		color: 'violet',
+		label: 'Primary Button',
+		onClick: () => console.log('Primary Button clicked'),
+		color: 'primary',
 	},
 };
 
-export const Gradient: Story = {
+export const Secondary: Story = {
 	args: {
-		label: 'Gradient Button',
-		onClick: () => console.log('Gradient Button clicked'),
-		color: 'gradient',
+		label: 'Secondary Button',
+		onClick: () => console.log('Secondary Button clicked'),
+		color: 'secondary',
 	},
 };
 
@@ -41,7 +41,8 @@ export const LargeSize: Story = {
 	args: {
 		label: 'Large Button',
 		onClick: () => console.log('Large Button clicked'),
-		size: 'L',
+		size: 'l',
+		color: 'base',
 	},
 };
 
@@ -49,7 +50,8 @@ export const MediumSize: Story = {
 	args: {
 		label: 'Medium Button',
 		onClick: () => console.log('Medium Button clicked'),
-		size: 'M',
+		size: 'm',
+		color: 'primary',
 	},
 };
 
@@ -57,14 +59,7 @@ export const WithIcon: Story = {
 	args: {
 		label: 'Button with Icon',
 		onClick: () => console.log('Button with Icon clicked'),
-		icon: <MumbleIcon color="white" />, // Replace with the actual icon you want to use
-	},
-};
-
-export const Disabled: Story = {
-	args: {
-		label: 'Disabled Button',
-		onClick: () => console.log('Disabled Button clicked'),
-		disabled: true,
+		icon: <MumbleIcon color="white" size="s" />, // Replace with the actual icon you want to use
+		color: 'secondary',
 	},
 };
