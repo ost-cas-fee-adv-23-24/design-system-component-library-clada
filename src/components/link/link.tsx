@@ -20,7 +20,7 @@ export const Link = <
 	openInNewTab = false,
 	...props
 }: LinkProps<T>) => {
-	const LinkComponent = linkComponent || 'a';
+	const LinkComponent: FC<T> | 'a' = linkComponent || 'a';
 
 	return (
 		<LinkComponent
