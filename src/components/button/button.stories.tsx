@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
 import { MumbleIcon } from '../icons';
-import React from 'react';
 
 const meta: Meta<typeof Button> = {
 	title: 'Components/Button',
@@ -59,7 +58,7 @@ export const WithIcon: Story = {
 	args: {
 		label: 'Button with Icon',
 		onClick: () => console.log('Button with Icon clicked'),
-		icon: <MumbleIcon color="white" size="s" />,
+		Icon: MumbleIcon,
 		color: 'secondary',
 	},
 };
@@ -70,6 +69,6 @@ export const NoLabelButton: Story = {
 		color: 'base',
 		noLabel: true,
 		size: 'l',
-		icon: <MumbleIcon color="white" size="s" />,
+		Icon: MumbleIcon,
 	},
 };

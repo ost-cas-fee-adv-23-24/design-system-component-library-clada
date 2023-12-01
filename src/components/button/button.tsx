@@ -1,16 +1,17 @@
-import React, { FC, ReactNode } from 'react';
+import React, { ComponentType, FC } from 'react';
 import classnames from 'classnames';
+import { IconProps } from '../icons/iconUtils';
 
 export interface ButtonProps {
 	label?: string;
 	onClick: () => void;
 	color: 'base' | 'primary' | 'secondary';
 	size: 'm' | 'l';
-	icon?: ReactNode;
-	noLabel?: boolean; // new prop for no label
+	Icon?: ComponentType<IconProps>;
+	noLabel?: boolean;
 }
 
-export const Button: FC<ButtonProps> = ({ label, onClick, color, size, icon, noLabel }) => {
+export const Button: FC<ButtonProps> = ({ label, onClick, color, size, Icon, noLabel }) => {
 	const baseClasses = 'leading-none text-base duration-300 focus:outline-none flex items-center justify-center';
 	const sizeClasses = size === 'l' || noLabel ? 'px-m py-s' : 'p-3';
 	const colorClasses = {
@@ -29,8 +30,8 @@ export const Button: FC<ButtonProps> = ({ label, onClick, color, size, icon, noL
 				colorClasses[color],
 				noLabel ? 'rounded-full px-s' : 'rounded-s',
 			)}>
-			{!noLabel && <span className={icon ? (size === 'l' ? 'mr-3' : 'mr-xs') : ''}>{label}</span>}
-			{icon}
+			{!noLabel && <span className={Icon ? (size === 'l' ? 'mr-3' : 'mr-xs') : ''}>{label}</span>}
+			{Icon && <Icon size="s" color="white" />}
 		</button>
 	);
 };
