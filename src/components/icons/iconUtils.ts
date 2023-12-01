@@ -29,14 +29,14 @@ export const getColorClass = (color: 'base' | 'white' | 'primary' | 'secondary' 
 };
 
 export interface IconProps {
-	size: 's' | 'm' | 'l';
-	color: 'base' | 'white' | 'primary' | 'secondary' | 'error';
+	size?: 's' | 'm' | 'l';
+	color?: 'base' | 'white' | 'primary' | 'secondary' | 'error';
 }
 
 export interface FillableIconProps extends IconProps {
-	filled: true | false;
+	filled?: true | false;
 }
 
 export interface RotatableIconProps extends IconProps {
-	direction: 'up' | 'down' | 'left' | 'right';
+	direction?: 'up' | 'down' | 'left' | 'right';
 }

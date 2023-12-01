@@ -5,6 +5,11 @@ import plugin from 'tailwindcss/plugin';
 // eslint-disable-next-line no-undef
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+	safelist: [
+		'text-base-900',
+		'text-primary-900',
+		'text-secondary-900'
+	  ],
 	theme: {
 		colors: {
 			white: '#ffffff',
@@ -38,14 +43,16 @@ module.exports = {
 			semiBold: '600',
 			bold: '700',
 		},
-		spacing: {
-			xxs: '4px',
-			xs: '8px',
-			s: '16px',
-			m: '24px',
-			l: '32px',
-			xl: '48px',
-			xxl: '64px',
+		extend: {
+			spacing: {
+				xxs: '4px',
+				xs: '8px',
+				s: '16px',
+				m: '24px',
+				l: '32px',
+				xl: '48px',
+				xxl: '64px',
+			}
 		},
 		borderWidth: {
 			1: '1px',
