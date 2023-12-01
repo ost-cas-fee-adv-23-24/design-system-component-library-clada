@@ -1,5 +1,6 @@
 import React, { FC, forwardRef } from 'react';
 import classnames from 'classnames';
+import { Label } from '../label';
 
 export type TextareaProps = {
 	id: string;
@@ -15,9 +16,9 @@ export const Textarea: FC<TextareaProps> = forwardRef<HTMLTextAreaElement, Texta
 		return (
 			<div className="grid gap-xxs">
 				{label && (
-					<label htmlFor={id} className={'text-black mb-font-label-m'}>
+					<Label size={'s'} color={'base'} htmlFor={id}>
 						{label}
-					</label>
+					</Label>
 				)}
 				<textarea
 					ref={ref}

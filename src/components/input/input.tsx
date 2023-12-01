@@ -2,6 +2,7 @@ import React, { ChangeEvent, ComponentPropsWithRef, ComponentType, FC } from 're
 import classnames from 'classnames';
 import { CancelIcon } from '../icons';
 import { IconProps } from '../icons/iconUtils';
+import { Label } from '../label';
 
 export interface InputProps extends ComponentPropsWithRef<'input'> {
 	id: string;
@@ -29,10 +30,10 @@ export const Input: FC<InputProps> = ({
 	const iconPosition = 'absolute right-s top-1/2 -translate-y-1/2';
 
 	return (
-		<div className={'flex flex-col gap-xs'}>
-			<label htmlFor={id} className={'text-black mb-font-label-m'}>
+		<div className={'flex flex-col gap-xxs'}>
+			<Label size={'s'} color={'base'} htmlFor={id}>
 				{label}
-			</label>
+			</Label>
 			<div className={'relative w-full'}>
 				<input
 					id={id}
@@ -63,7 +64,14 @@ export const Input: FC<InputProps> = ({
 					</div>
 				)}
 			</div>
-			{error && <span className={'ml-auto text-error mb-font-label-m'}>{error}</span>}
+			{/*{error && <span className={'ml-auto text-error mb-font-label-m'}>{error}</span>}*/}
+			{error && (
+				<div className="ml-auto">
+					<Label size="s" color="error" as="span">
+						{error}
+					</Label>
+				</div>
+			)}
 		</div>
 	);
 };
