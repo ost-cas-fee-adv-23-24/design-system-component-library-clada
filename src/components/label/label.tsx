@@ -10,7 +10,7 @@ interface LabelPropsDef extends ComponentProps<'label'> {
 
 export type LabelProps = Omit<LabelPropsDef, 'className'>;
 
-export const Label: FC<LabelProps> = ({ children, size, color, as: Component = 'label', ...props }) => {
+export const Label: FC<LabelProps> = ({ children, size, color = 'base', as: Component = 'label', ...props }) => {
 	return (
 		<Component
 			className={classnames(`text-inherit mb-font-label-${size}`, {
