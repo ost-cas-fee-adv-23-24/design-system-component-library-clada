@@ -39,9 +39,14 @@ export const Input: FC<InputProps> = ({
 					id={id}
 					ref={ref}
 					className={classnames(
-						'mb-font-placeholder-m w-full rounded-s border-1 border-base-200 bg-base-50 p-s outline-none duration-300 hover:border-primary-600 focus:border-3 focus:border-primary-600',
+						'mb-font-placeholder-m w-full bg-base-50 text-base-900 placeholder-base-500',
+						'border rounded-s border-base-200 p-s outline-none ring-1 ring-base-200',
+						'transition-all duration-300',
+						'hover:border-base-300 hover:ring-2 hover:ring-base-300',
+						'focus:ring-3 focus:border-primary-600 focus:ring-primary-600',
 						{
-							'border-3 border-error': error !== undefined,
+							'border-error ring-error hover:border-error hover:ring-error focus:border-error focus:ring-error':
+								error !== undefined,
 						},
 					)}
 					type={type}
