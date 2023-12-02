@@ -83,7 +83,7 @@ module.exports = {
 						'colors.primary.500',
 					)} 62.92%)`,
 				},
-				'.mb-bg-gradient-focus': {
+				'.mb-bg-gradient-active': {
 					transition: 'background 0.3s ease-out',
 					background: `linear-gradient(90deg, ${theme('colors.secondary.600')} -15.33%, ${theme(
 						'colors.primary.500',
