@@ -19,5 +19,7 @@ export { CalendarIcon } from './icons/calendar';
 export { HeartIcon } from './icons/heart';
 export { ReplyIcon } from './icons/reply';
 export { ArrowIcon } from './icons/arrow';
+export { Label } from './label';
 export { Link } from './link';
 export { Textarea } from './textarea';
+export { Logo } from './logo';
