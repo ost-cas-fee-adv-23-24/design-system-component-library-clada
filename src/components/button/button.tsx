@@ -12,9 +12,7 @@ export interface ButtonProps {
 }
 
 export const Button: FC<ButtonProps> = ({ label, onClick, color, size, Icon, noLabel }) => {
-	const baseClasses = `leading-none text-base ${
-		!noLabel ? 'w-full' : ''
-	}  transition-all duration-300 hover:ring active:ring-4 focus:outline-none flex items-center justify-center`;
+	const baseClasses = `leading-none text-base transition-all duration-300 hover:ring active:ring-4 focus:outline-none flex items-center justify-center`;
 	const sizeClasses = size === 'l' || noLabel ? 'px-m py-s' : 'p-3';
 	const colorClasses = {
 		base: 'bg-base-600 hover:bg-base-700 active:bg-base-700 text-white hover:ring-base-100 active:ring-base-200',
@@ -30,7 +28,7 @@ export const Button: FC<ButtonProps> = ({ label, onClick, color, size, Icon, noL
 				baseClasses,
 				sizeClasses,
 				colorClasses[color],
-				noLabel ? 'rounded-full px-s' : 'rounded-s',
+				noLabel ? 'rounded-full px-s' : 'w-full rounded-s',
 			)}>
 			{!noLabel && <span className={Icon ? (size === 'l' ? 'mr-3' : 'mr-xs') : ''}>{label}</span>}
 			{Icon && <Icon size="s" color="white" />}
