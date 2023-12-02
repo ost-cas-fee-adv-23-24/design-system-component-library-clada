@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Toggle } from '../toggle/toggle'; // Ensure correct path for Toggle import
-import { HeartIcon } from '../icons/heart'; // Ensure correct path for HeartIcon import
+import { Toggle } from '../toggle/toggle';
+import { HeartIcon } from '../icons';
 
 interface LikeButtonProps {
 	count: number;
@@ -42,6 +42,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({ count, onClick }) => {
 	return (
 		<Toggle
 			label={label}
+			isToggled={isLiked}
 			onClick={handleLikeClick}
 			color="secondary"
 			useToggledColor={true}

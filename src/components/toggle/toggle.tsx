@@ -3,6 +3,7 @@ import classnames from 'classnames';
 
 export interface ToggleProps {
 	label: string;
+	isToggled: boolean;
 	onClick: () => void;
 	color: 'base' | 'primary' | 'secondary';
 	useToggledColor?: boolean;
@@ -14,6 +15,7 @@ export interface ToggleProps {
 
 export const Toggle: FC<ToggleProps> = ({
 	label,
+	isToggled,
 	onClick,
 	color,
 	useToggledColor,
@@ -22,12 +24,11 @@ export const Toggle: FC<ToggleProps> = ({
 	hoveredIcon,
 	disabled,
 }) => {
-	const [isToggled, setIsToggled] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);
 
 	const handleToggle = () => {
 		if (!disabled) {
-			setIsToggled(!isToggled);
+			isToggled = !isToggled;
 			setIsHovered(true);
 			onClick();
 		}
@@ -39,11 +40,11 @@ export const Toggle: FC<ToggleProps> = ({
 		base:
 			!isToggled && !disabled
 				? 'hover:bg-base-50 hover:text-base-600'
-				: `ml-xs text-${useToggledColor ? color + '-900' : 'base-600'}`,
+				: `text-${useToggledColor ? color + '-900' : 'base-600'}`,
 		primary:
 			!isToggled && !disabled
 				? 'hover:bg-primary-50 hover:text-primary-600'
-				: `ml-xs text-${useToggledColor ? color + '-900' : 'base-600'}`,
+				: `text-${useToggledColor ? color + '-900' : 'base-600'}`,
 		secondary:
 			!isToggled && !disabled
 				? 'hover:bg-secondary-50 hover:text-secondary-600'
@@ -55,7 +56,6 @@ export const Toggle: FC<ToggleProps> = ({
 	};
 
 	const renderIcon = () => {
-		console.log(isHovered);
 		if (isToggled && toggledIcon) return toggledIcon;
 		if (isHovered && hoveredIcon) return hoveredIcon;
 		return icon;
