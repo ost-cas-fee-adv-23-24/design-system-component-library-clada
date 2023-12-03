@@ -7,6 +7,7 @@ module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
 		colors: {
+			'transparent': 'transparent',
 			white: '#ffffff',
 			black: '#000000',
 			error: '#FF0000',
@@ -38,16 +39,6 @@ module.exports = {
 			semiBold: '600',
 			bold: '700',
 		},
-		spacing: {
-			'0': '0px',
-			xxs: '4px',
-			xs: '8px',
-			s: '16px',
-			m: '24px',
-			l: '32px',
-			xl: '48px',
-			xxl: '64px',
-		},
 		borderWidth: {
 			1: '1px',
 			2: '2px',
@@ -62,6 +53,18 @@ module.exports = {
 			l: '24px',
 			full: '9999px',
 		},
+		extend: {
+			spacing: {
+                '0': '0px',
+				xxs: '4px',
+				xs: '8px',
+				s: '16px',
+				m: '24px',
+				l: '32px',
+				xl: '48px',
+				xxl: '64px',
+			},
+		},
 	},
 	plugins: [
 		/**
@@ -71,16 +74,19 @@ module.exports = {
 		plugin(function ({ addUtilities, theme }) {
 			addUtilities({
 				'.mb-bg-gradient': {
+					transition: 'background 0.3s ease-out',
 					background: `linear-gradient(90deg, ${theme('colors.secondary.500')} 0%, ${theme(
 						'colors.primary.600',
 					)} 100%)`,
 				},
 				'.mb-bg-gradient-hover': {
+					transition: 'background 0.3s ease-out',
 					background: `linear-gradient(90deg, ${theme('colors.secondary.600')} -12.56%, ${theme(
 						'colors.primary.500',
 					)} 62.92%)`,
 				},
-				'.mb-bg-gradient-focus': {
+				'.mb-bg-gradient-active': {
+					transition: 'background 0.3s ease-out',
 					background: `linear-gradient(90deg, ${theme('colors.secondary.600')} -15.33%, ${theme(
 						'colors.primary.500',
 					)} 38.87%)`,

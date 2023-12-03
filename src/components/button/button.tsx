@@ -1,13 +1,37 @@
-import React, { FC } from 'react';
+import React, { ComponentType, FC } from 'react';
+import classnames from 'classnames';
+import { IconProps } from '../icons/iconUtils';
 
 export interface ButtonProps {
-	id: string;
+	label?: string;
+	onClick: () => void;
+	color: 'base' | 'primary' | 'secondary';
+	size: 'm' | 'l';
+	Icon?: ComponentType<IconProps>;
+	noLabel?: boolean;
 }
 
-export const Button: FC<ButtonProps> = ({ id }) => {
+export const Button: FC<ButtonProps> = ({ label, onClick, color, size, Icon, noLabel }) => {
+	const baseClasses = `leading-none text-base transition-all duration-300 hover:ring active:ring-4 focus:outline-none flex items-center justify-center`;
+	const sizeClasses = size === 'l' || noLabel ? 'px-m py-s' : 'p-3';
+	const colorClasses = {
+		base: 'bg-base-600 hover:bg-base-700 active:bg-base-700 text-white hover:ring-base-100 active:ring-base-200',
+		primary:
+			'bg-primary-600 hover:bg-primary-700 active:bg-primary-700 text-white hover:ring-primary-100 active:ring-primary-200',
+		secondary:
+			'mb-bg-gradient hover:mb-bg-gradient-hover active:mb-bg-gradient-active text-white hover:ring-primary-100 active:ring-primary-200',
+	};
 	return (
-		<button id={id} className="bg-primary-600 text-white">
-			Hello World!
+		<button
+			onClick={onClick}
+			className={classnames(
+				baseClasses,
+				sizeClasses,
+				colorClasses[color],
+				noLabel ? 'rounded-full px-s' : 'w-full rounded-s',
+			)}>
+			{!noLabel && <span className={Icon ? (size === 'l' ? 'mr-3' : 'mr-xs') : ''}>{label}</span>}
+			{Icon && <Icon size="s" color="white" />}
 		</button>
 	);
 };

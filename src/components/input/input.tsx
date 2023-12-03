@@ -2,6 +2,7 @@ import React, { ChangeEvent, ComponentPropsWithRef, ComponentType, FC } from 're
 import classnames from 'classnames';
 import { CancelIcon } from '../icons';
 import { IconProps } from '../icons/iconUtils';
+import { Label } from '../label';
 
 export interface InputProps extends ComponentPropsWithRef<'input'> {
 	id: string;
@@ -29,18 +30,23 @@ export const Input: FC<InputProps> = ({
 	const iconPosition = 'absolute right-s top-1/2 -translate-y-1/2';
 
 	return (
-		<div className={'flex flex-col gap-xs'}>
-			<label htmlFor={id} className={'text-black mb-font-label-m'}>
+		<div className={'flex flex-col gap-xxs'}>
+			<Label size={'s'} color={'base'} htmlFor={id}>
 				{label}
-			</label>
+			</Label>
 			<div className={'relative w-full'}>
 				<input
 					id={id}
 					ref={ref}
 					className={classnames(
-						'mb-font-placeholder-m w-full rounded-s border-1 border-base-200 bg-base-50 p-s outline-none duration-300 hover:border-primary-600 focus:border-3 focus:border-primary-600',
+						'mb-font-placeholder-m w-full bg-base-50 text-base-900 placeholder-base-500',
+						'border rounded-s border-base-200 p-s outline-none ring-1 ring-base-200',
+						'transition-all duration-300',
+						'hover:border-base-300 hover:ring-2 hover:ring-base-300',
+						'focus:ring-3 focus:border-primary-600 focus:ring-primary-600',
 						{
-							'border-3 border-error': error !== undefined,
+							'border-error ring-error hover:border-error hover:ring-error focus:border-error focus:ring-error':
+								error !== undefined,
 						},
 					)}
 					type={type}
@@ -58,7 +64,14 @@ export const Input: FC<InputProps> = ({
 					</div>
 				)}
 			</div>
-			{error && <span className={'ml-auto text-error mb-font-label-m'}>{error}</span>}
+			{/*{error && <span className={'ml-auto text-error mb-font-label-m'}>{error}</span>}*/}
+			{error && (
+				<div className="ml-auto">
+					<Label size="s" color="error" as="span">
+						{error}
+					</Label>
+				</div>
+			)}
 		</div>
 	);
 };
