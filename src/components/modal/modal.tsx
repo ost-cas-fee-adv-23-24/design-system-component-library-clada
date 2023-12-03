@@ -1,7 +1,8 @@
 import React, { FC, Fragment, ReactNode } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import classNames from 'classnames';
-import { CancelIcon } from '../icons';
+import { CancelIcon, CheckIcon } from '../icons';
+import { Button } from '../button';
 
 export interface ModalProps {
 	children: ReactNode;
@@ -56,18 +57,10 @@ export const Modal: FC<ModalProps> = ({ children, title, isOpen, width, onClose,
 									</button>
 								</Dialog.Title>
 								<div className="p-l">
-									{/* content area */}
 									{children}
-									{/* button area */}
 									<div className="mt-xxl grid grid-cols-1 gap-s md:grid-cols-2">
-										<button onClick={onClose}>Abbrechen</button>
-										<button onClick={onSubmit}>Speichern</button>
-										{/*<Button icon="cancel" variant="secondary" onClick={onClose}>*/}
-										{/*    Abbrechen*/}
-										{/*</Button>*/}
-										{/*<Button icon="checkmark" onClick={onSubmit}>*/}
-										{/*    Speichern*/}
-										{/*</Button>*/}
+										<Button label={'Abbrechen'} Icon={CancelIcon} color="base" onClick={onClose} size="m" />
+										<Button label={'Speichern'} Icon={CheckIcon} color="primary" onClick={onSubmit} size="m" />
 									</div>
 								</div>
 							</Dialog.Panel>
