@@ -6,15 +6,6 @@ import plugin from 'tailwindcss/plugin';
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
-		colors: {
-			'transparent': 'transparent',
-			white: '#ffffff',
-			black: '#000000',
-			error: '#FF0000',
-			primary: colors.violet,
-			secondary: colors.pink,
-			base: colors.slate,
-		},
 		fontFamily: {
 			default: ['Poppins', 'Arial', 'sans-serif'],
 		},
@@ -54,6 +45,15 @@ module.exports = {
 			full: '9999px',
 		},
 		extend: {
+			colors: {
+				transparent: 'transparent',
+				white: '#ffffff',
+				black: '#000000',
+				error: '#FF0000',
+				primary: colors.violet,
+				secondary: colors.pink,
+				base: colors.slate,
+			},
 			spacing: {
 				xxs: '4px',
 				xs: '8px',
