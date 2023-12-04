@@ -10,7 +10,7 @@ interface LikeButtonProps {
 
 const getLikesText = (count: number) => (count > 1 ? `${count} Likes` : `${count ? count + ' ' : ''}Like`);
 
-const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, onClick }) => {
+export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, onClick }) => {
 	const [isLiked, setIsLiked] = useState(isAlreadyLiked);
 	const [label, setLabel] = useState(getLikesText(count));
 	const [disabled, setDisabled] = useState(false);

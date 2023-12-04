@@ -10,7 +10,7 @@ interface CommentButtonProps {
 
 const getCommentText = (count: number) => (count > 1 ? `${count} Comments` : `${count ? count + ' ' : ''}Comment`);
 
-const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommented, onClick }) => {
+export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommented, onClick }) => {
 	const label = getCommentText(count);
 
 	const handleCommentClick = () => {

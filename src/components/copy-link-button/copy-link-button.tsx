@@ -6,7 +6,7 @@ interface CopyLinkProps {
 	onClick: () => void;
 }
 
-const CopyLinkButton: React.FC<CopyLinkProps> = ({ onClick }) => {
+export const CopyLinkButton: React.FC<CopyLinkProps> = ({ onClick }) => {
 	const defaultLabel = 'Copy Link';
 	const activeLabel = 'Link copied';
 
