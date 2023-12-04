@@ -4,18 +4,19 @@ import { HeartIcon } from '../icons';
 
 interface LikeButtonProps {
 	count: number;
+	isAlreadyLiked: boolean;
 	onClick: () => void;
 }
 
 const getLikesText = (count: number) => (count > 1 ? `${count} Likes` : `${count ? count + ' ' : ''}Like`);
 
-const LikeButton: React.FC<LikeButtonProps> = ({ count, onClick }) => {
-	const [isLiked, setIsLiked] = useState(false);
+const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, onClick }) => {
+	const [isLiked, setIsLiked] = useState(isAlreadyLiked);
 	const [label, setLabel] = useState(getLikesText(count));
 	const [disabled, setDisabled] = useState(false);
 
 	useEffect(() => {
-		if (isLiked) {
+		if (isLiked && !isAlreadyLiked) {
 			setDisabled(true);
 			setLabel('Liked');
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Toggle } from './toggle';
 import { HeartIcon } from '../icons/heart';
-import { ReplyIcon } from '../icons/reply';
-import { ShareIcon } from '../icons/share';
 
 const meta = {
 	title: 'Components/Toggle',
@@ -52,27 +50,5 @@ export const Like = {
 		color: 'secondary',
 		useToggledColor: true,
 		onClick: () => console.log('Like Button Toggle clicked'),
-	},
-};
-
-export const Comment = {
-	args: {
-		label: 'Comment',
-		isToggled: false,
-		icon: <ReplyIcon size="s" color="base" />,
-		hoveredIcon: <ReplyIcon size="s" color="primary" />,
-		toggledIcon: <ReplyIcon size="s" color="primary" filled={true} />,
-		color: 'primary',
-		onClick: () => console.log('Comment Counter Toggle clicked'),
-	},
-};
-
-export const Copy = {
-	args: {
-		label: 'Copy Link',
-		isToggled: false,
-		icon: <ShareIcon size="s" color="base" />,
-		color: 'base',
-		onClick: () => console.log('Copy LinkToggle clicked'),
 	},
 };

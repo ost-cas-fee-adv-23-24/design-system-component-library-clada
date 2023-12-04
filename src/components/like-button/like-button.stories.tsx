@@ -37,6 +37,7 @@ export default meta;
 export const DefaultLikeButton = {
 	args: {
 		count: 0,
+		isAlreadyLiked: false,
 		onClick: () => console.log('like button clicked'),
 	},
 };
@@ -44,6 +45,7 @@ export const DefaultLikeButton = {
 export const LikeButtonWithInitialLikes = {
 	args: {
 		count: 5,
+		isAlreadyLiked: true,
 		onClick: () => console.log('like button clicked'),
 	},
 };

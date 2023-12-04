@@ -35,7 +35,7 @@ export const Toggle: FC<ToggleProps> = ({
 	};
 
 	const baseClasses =
-		'leading-none px-3 py-xs focus:outline-none flex items-center justify-center rounded-full cursor-pointer transition duration-300 ease-in-out transform';
+		'leading-none text-base-600 px-3 py-xs focus:outline-none flex items-center justify-center rounded-full cursor-pointer transition duration-300 ease-in-out transform';
 	const colorClasses = {
 		base:
 			!isToggled && !disabled
@@ -66,7 +66,7 @@ export const Toggle: FC<ToggleProps> = ({
 			onClick={handleToggle}
 			onMouseOver={() => setIsHovered(!disabled && !isToggled)}
 			onMouseOut={() => setIsHovered(false)}
-			className={classnames(baseClasses, colorClasses[color])}>
+			className={classnames(baseClasses, colorClasses[color], disabled ? 'cursor-default' : '')}>
 			{renderIcon()}
 			<span className={getLabelClasses()}>{label}</span>
 		</button>
