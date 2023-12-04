@@ -1,4 +1,4 @@
-export const getSizeClass = (size: 's' | 'm' | 'l' | undefined) => {
+export const getSizeClass = (size?: 's' | 'm' | 'l') => {
 	switch (size) {
 		case 's':
 			return 'w-s h-s';
@@ -11,7 +11,7 @@ export const getSizeClass = (size: 's' | 'm' | 'l' | undefined) => {
 	}
 };
 
-export const getColorClass = (color: 'base' | 'white' | 'primary' | 'secondary' | 'error' | undefined) => {
+export const getColorClass = (color?: 'base' | 'white' | 'primary' | 'secondary' | 'error') => {
 	switch (color) {
 		case 'base':
 			return 'fill-base-600';
