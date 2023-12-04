@@ -5,20 +5,16 @@ import plugin from 'tailwindcss/plugin';
 // eslint-disable-next-line no-undef
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-	safelist: [
-		'text-base-900',
-		'text-primary-900',
-		'text-secondary-900'
-	  ],
+	safelist: ['text-base-900', 'text-primary-900', 'text-secondary-900'],
 	theme: {
 		colors: {
-			'transparent': 'transparent',
+			transparent: 'transparent',
 			white: '#ffffff',
 			black: '#000000',
 			error: '#FF0000',
 			primary: colors.violet,
 			secondary: colors.pink,
-			base: colors.slate
+			base: colors.slate,
 		},
 		fontFamily: {
 			default: ['Poppins', 'Arial', 'sans-serif'],
@@ -53,7 +49,7 @@ module.exports = {
 				l: '32px',
 				xl: '48px',
 				xxl: '64px',
-			}
+			},
 		},
 		borderWidth: {
 			1: '1px',
@@ -69,6 +65,17 @@ module.exports = {
 			l: '24px',
 			full: '9999px',
 		},
+		extend: {
+			spacing: {
+				xxs: '4px',
+				xs: '8px',
+				s: '16px',
+				m: '24px',
+				l: '32px',
+				xl: '48px',
+				xxl: '64px',
+			},
+		},
 	},
 	plugins: [
 		/**
@@ -78,16 +85,19 @@ module.exports = {
 		plugin(function ({ addUtilities, theme }) {
 			addUtilities({
 				'.mb-bg-gradient': {
+					transition: 'background 0.3s ease-out',
 					background: `linear-gradient(90deg, ${theme('colors.secondary.500')} 0%, ${theme(
 						'colors.primary.600',
 					)} 100%)`,
 				},
 				'.mb-bg-gradient-hover': {
+					transition: 'background 0.3s ease-out',
 					background: `linear-gradient(90deg, ${theme('colors.secondary.600')} -12.56%, ${theme(
 						'colors.primary.500',
 					)} 62.92%)`,
 				},
-				'.mb-bg-gradient-focus': {
+				'.mb-bg-gradient-active': {
+					transition: 'background 0.3s ease-out',
 					background: `linear-gradient(90deg, ${theme('colors.secondary.600')} -15.33%, ${theme(
 						'colors.primary.500',
 					)} 38.87%)`,
