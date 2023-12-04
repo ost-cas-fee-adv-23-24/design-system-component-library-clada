@@ -55,6 +55,7 @@ module.exports = {
 				base: colors.slate,
 			},
 			spacing: {
+                '0': '0px',
 				xxs: '4px',
 				xs: '8px',
 				s: '16px',
