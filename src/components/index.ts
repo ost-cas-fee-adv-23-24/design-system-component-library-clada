@@ -24,3 +24,4 @@ export { Label } from './label';
 export { Link } from './link';
 export { Textarea } from './textarea';
 export { Logo } from './logo';
+export { IconButton } from './icon-button';
