@@ -32,7 +32,7 @@ export const getColorClass = (color?: 'base' | 'white' | 'primary' | 'secondary'
 
 export interface IconProps {
 	size?: 's' | 'm' | 'l';
-	color?: 'base' | 'white' | 'primary' | 'secondary' | 'error';
+	color?: 'base' | 'white' | 'primary' | 'secondary' | 'error' | 'inherit';
 }
 
 export interface FillableIconProps extends IconProps {
