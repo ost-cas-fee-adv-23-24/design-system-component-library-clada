@@ -5,7 +5,7 @@ export const ArrowIcon: FC<RotatableIconProps> = ({ size, color, direction }) =>
 	const svgClasses = `${getSizeClass(size)} ${getColorClass(color)}`;
 
 	// Function to get Tailwind rotation class based on direction
-	const getRotationClass = (direction: 'up' | 'down' | 'left' | 'right') => {
+	const getRotationClass = (direction?: 'up' | 'down' | 'left' | 'right') => {
 		switch (direction) {
 			case 'up':
 				return '-rotate-90'; // Rotates 90 degrees counter-clockwise

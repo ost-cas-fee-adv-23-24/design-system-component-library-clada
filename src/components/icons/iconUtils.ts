@@ -1,4 +1,4 @@
-export const getSizeClass = (size: 's' | 'm' | 'l') => {
+export const getSizeClass = (size?: 's' | 'm' | 'l') => {
 	switch (size) {
 		case 's':
 			return 'w-s h-s';
@@ -11,7 +11,7 @@ export const getSizeClass = (size: 's' | 'm' | 'l') => {
 	}
 };
 
-export const getColorClass = (color: 'base' | 'white' | 'primary' | 'secondary' | 'error' | 'inherit') => {
+export const getColorClass = (color?: 'base' | 'white' | 'primary' | 'secondary' | 'error' | 'inherit') => {
 	switch (color) {
 		case 'base':
 			return 'fill-base-600';
@@ -31,14 +31,14 @@ export const getColorClass = (color: 'base' | 'white' | 'primary' | 'secondary' 
 };
 
 export interface IconProps {
-	size: 's' | 'm' | 'l';
-	color: 'base' | 'white' | 'primary' | 'secondary' | 'error' | 'inherit';
+	size?: 's' | 'm' | 'l';
+	color?: 'base' | 'white' | 'primary' | 'secondary' | 'error' | 'inherit';
 }
 
 export interface FillableIconProps extends IconProps {
-	filled: true | false;
+	filled?: true | false;
 }
 
 export interface RotatableIconProps extends IconProps {
-	direction: 'up' | 'down' | 'left' | 'right';
+	direction?: 'up' | 'down' | 'left' | 'right';
 }

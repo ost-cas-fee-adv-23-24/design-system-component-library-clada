@@ -5,6 +5,7 @@ import plugin from 'tailwindcss/plugin';
 // eslint-disable-next-line no-undef
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+	safelist: ['text-base-900', 'text-primary-900', 'text-secondary-900'],
 	theme: {
 		fontFamily: {
 			default: ['Poppins', 'Arial', 'sans-serif'],
