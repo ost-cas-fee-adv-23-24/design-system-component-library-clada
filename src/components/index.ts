@@ -1,6 +1,7 @@
 export { Button } from './button';
 export { Input } from './input';
 export { Tabs } from './tabs';
+export { Modal } from './modal';
 export { CheckIcon } from './icons/check';
 export { CancelIcon } from './icons/cancel';
 export { RepostIcon } from './icons/repost';
@@ -23,3 +24,4 @@ export { Label } from './label';
 export { Link } from './link';
 export { Textarea } from './textarea';
 export { Logo } from './logo';
+export { IconButton } from './icon-button';

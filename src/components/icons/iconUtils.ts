@@ -11,7 +11,7 @@ export const getSizeClass = (size?: 's' | 'm' | 'l') => {
 	}
 };
 
-export const getColorClass = (color?: 'base' | 'white' | 'primary' | 'secondary' | 'error') => {
+export const getColorClass = (color?: 'base' | 'white' | 'primary' | 'secondary' | 'error' | 'inherit') => {
 	switch (color) {
 		case 'base':
 			return 'fill-base-600';
@@ -23,6 +23,8 @@ export const getColorClass = (color?: 'base' | 'white' | 'primary' | 'secondary'
 			return 'fill-white';
 		case 'error':
 			return 'fill-error';
+		case 'inherit':
+			return 'fill-current';
 		default:
 			return 'fill-slate-600';
 	}

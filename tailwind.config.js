@@ -7,15 +7,6 @@ module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	safelist: ['text-base-900', 'text-primary-900', 'text-secondary-900'],
 	theme: {
-		colors: {
-			transparent: 'transparent',
-			white: '#ffffff',
-			black: '#000000',
-			error: '#FF0000',
-			primary: colors.violet,
-			secondary: colors.pink,
-			base: colors.slate,
-		},
 		fontFamily: {
 			default: ['Poppins', 'Arial', 'sans-serif'],
 		},
@@ -55,7 +46,17 @@ module.exports = {
 			full: '9999px',
 		},
 		extend: {
+			colors: {
+				transparent: 'transparent',
+				white: '#ffffff',
+				black: '#000000',
+				error: '#FF0000',
+				primary: colors.violet,
+				secondary: colors.pink,
+				base: colors.slate,
+			},
 			spacing: {
+                '0': '0px',
 				xxs: '4px',
 				xs: '8px',
 				s: '16px',
