@@ -17,7 +17,7 @@ The Avatar component is used to display user images with various customization o
 ## Features
 - **Size Variability**: Comes in four sizes - small, medium, large, and extra-large.
 - **Border Customization**: Optional border settings including border removal and color changes.
-- **Hover Effect**: An optional hover effect that changes the border-radius and scales the image.
+- **Hover Effect**: An optional hover effect that changes the border-radius.
 - **Click Event**: Supports an onClick event handler for user interaction.
 
 ## Props
