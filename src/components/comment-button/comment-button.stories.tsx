@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react';
 import CommentButton from './comment-button';
 
 const meta: Meta<typeof CommentButton> = {
-	title: 'Components/CommentButton',
+	title: 'Components/Buttons/CommentButton',
 	component: CommentButton,
 	tags: ['autodocs'],
 	parameters: {

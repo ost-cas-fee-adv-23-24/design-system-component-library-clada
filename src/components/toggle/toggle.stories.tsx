@@ -3,7 +3,7 @@ import { Toggle } from './toggle';
 import { HeartIcon } from '../icons/heart';
 
 const meta = {
-	title: 'Components/Toggle',
+	title: 'Components/Buttons/Toggle',
 	component: Toggle,
 	tags: ['autodocs'],
 	parameters: {
