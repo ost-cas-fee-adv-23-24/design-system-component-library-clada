@@ -31,7 +31,7 @@ The CopyLinkButton is ideal for use in scenarios where users need to copy URLs o
 
 export default meta;
 
-export const ShareButton = {
+export const CopyLink = {
 	args: {
 		labels: {
 			default: 'Copy Link',
