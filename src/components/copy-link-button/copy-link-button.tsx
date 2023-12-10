@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Toggle } from '../toggle/toggle';
 import { ShareIcon } from '../icons';
 
-interface CopyLinkProps {
+export type CopyLinkProps = {
 	onClick: () => void;
-}
+};
 
 export const CopyLinkButton: React.FC<CopyLinkProps> = ({ onClick }) => {
 	const defaultLabel = 'Copy Link';

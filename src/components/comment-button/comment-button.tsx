@@ -2,11 +2,11 @@ import React from 'react';
 import { Toggle } from '../toggle/toggle';
 import { ReplyIcon } from '../icons';
 
-interface CommentButtonProps {
+export type CommentButtonProps = {
 	count: number;
 	hasCommented: boolean;
 	onClick: () => void; // This should be updated in the parent component to handle state changes
-}
+};
 
 const getCommentText = (count: number) => (count > 1 ? `${count} Comments` : `${count ? count + ' ' : ''}Comment`);
 

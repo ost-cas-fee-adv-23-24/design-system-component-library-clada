@@ -2,7 +2,7 @@ import React, { ComponentType, FC } from 'react';
 import classnames from 'classnames';
 import { IconProps } from '../icons/iconUtils';
 
-export interface ButtonProps {
+export type ButtonProps = {
 	label?: string;
 	onClick: () => void;
 	color: 'base' | 'primary' | 'secondary';
@@ -10,7 +10,7 @@ export interface ButtonProps {
 	size: 'm' | 'l';
 	Icon?: ComponentType<IconProps>;
 	noLabel?: boolean;
-}
+};
 
 export const Button: FC<ButtonProps> = ({ label, onClick, color, noBorder = false, size, Icon, noLabel }) => {
 	const baseClasses = `leading-none text-base transition-all duration-300 hover:ring active:ring-4 focus:outline-none flex items-center justify-center`;
