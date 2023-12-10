@@ -10,7 +10,7 @@ interface CommentButtonProps {
 		singular: string;
 		plural: string;
 	};
-	onClick: () => void;
+	onClick: () => void; // This should update the count and hasCommented state in the parent component
 }
 
 const getCommentText = (count: number, labels: { zero: string; singular: string; plural: string }) => {
