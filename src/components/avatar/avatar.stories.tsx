@@ -50,6 +50,10 @@ type AvatarStory = StoryObj<AvatarProps>;
 type AvatarEditProps = Parameters<typeof AvatarEdit>[0]; // Extract props type for AvatarEdit
 type AvatarEditStory = StoryObj<AvatarEditProps>;
 
+const ImageComponent = ({ className }) => (
+	<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d" alt="User Avatar" className={className} />
+);
+
 const AvatarTemplate: AvatarStory['render'] = (args) => <Avatar {...args} />;
 
 const AvatarEditTemplate: AvatarEditStory['render'] = (args) => <AvatarEdit {...args} />;
@@ -59,7 +63,7 @@ export const Small: AvatarStory = {
 	args: {
 		size: 's',
 		noBorder: true,
-		imageUrl: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d',
+		ImageComponent: ImageComponent,
 		onClick: () => console.log('Avatar clicked'),
 	},
 };
@@ -68,7 +72,7 @@ export const Medium: AvatarStory = {
 	render: AvatarTemplate,
 	args: {
 		size: 'm',
-		imageUrl: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d',
+		ImageComponent: ImageComponent,
 		onClick: () => console.log('Avatar clicked'),
 	},
 };
@@ -77,7 +81,7 @@ export const Large: AvatarStory = {
 	render: AvatarTemplate,
 	args: {
 		size: 'l',
-		imageUrl: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d',
+		ImageComponent: ImageComponent,
 		onClick: () => console.log('Avatar clicked'),
 		hoverEffect: 'all',
 	},
@@ -87,7 +91,7 @@ export const ExtraLarge: AvatarStory = {
 	render: AvatarTemplate,
 	args: {
 		size: 'xl',
-		imageUrl: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d',
+		ImageComponent: ImageComponent,
 		onClick: () => console.log('Avatar clicked'),
 		borderColor: 'white',
 		hoverEffect: 'none',
@@ -97,7 +101,7 @@ export const ExtraLarge: AvatarStory = {
 export const Editable: AvatarEditStory = {
 	render: AvatarEditTemplate,
 	args: {
-		imageUrl: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d',
+		ImageComponent: ImageComponent,
 		hoverEffect: 'none',
 		onClick: () => console.log('Avatar clicked'),
 		editOnClick: () => console.log('Edit clicked'),

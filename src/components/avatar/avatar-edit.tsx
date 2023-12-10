@@ -7,17 +7,10 @@ type AvatarEditProps = {
 	editOnClick: () => void;
 } & Omit<AvatarProps, 'size' | 'borderColor' | 'hoeverEffect'>;
 
-export const AvatarEdit: React.FC<AvatarEditProps> = ({ editOnClick, imageUrl, altText, onClick }) => {
+export const AvatarEdit: React.FC<AvatarEditProps> = ({ editOnClick, ImageComponent, onClick }) => {
 	return (
 		<div className="border-0 relative h-40 w-40 rounded-full">
-			<Avatar
-				size="xl"
-				imageUrl={imageUrl}
-				borderColor="white"
-				hoverEffect="none"
-				altText={altText}
-				onClick={onClick}
-			/>
+			<Avatar size="xl" ImageComponent={ImageComponent} borderColor="white" hoverEffect="none" onClick={onClick} />
 			<div className="absolute bottom-0 right-0">
 				<Button
 					color="base"

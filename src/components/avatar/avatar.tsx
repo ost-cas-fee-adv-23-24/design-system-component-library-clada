@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { ComponentType } from 'react';
 
 export type AvatarProps = {
 	size: 's' | 'm' | 'l' | 'xl';
-	imageUrl: string;
-	altText: string;
+	ImageComponent: ComponentType<{ className: string }>;
 	noBorder?: boolean;
 	borderColor?: 'white' | 'base';
 	onClick?: () => void;
@@ -19,8 +18,7 @@ const sizeClasses = {
 
 export const Avatar: React.FC<AvatarProps> = ({
 	size,
-	imageUrl,
-	altText = 'User Avatar',
+	ImageComponent,
 	noBorder = false,
 	borderColor = 'base',
 	onClick,
@@ -45,7 +43,7 @@ export const Avatar: React.FC<AvatarProps> = ({
 		<div
 			className={`transition-border-radius cursor-pointer overflow-hidden rounded-full bg-primary-200 duration-100 ease-out ${borderClasses} ${colorClasses} ${sizeClasses[size]} ${hoverBorderClasses}`}
 			onClick={handleOnClick}>
-			{<img src={imageUrl} alt={altText} className={imageClasses} />}
+			<ImageComponent className={imageClasses} />
 		</div>
 	);
 };

@@ -22,7 +22,7 @@ export const Button: FC<ButtonProps> = ({ label, onClick, color, noBorder = fals
 		secondary:
 			'mb-bg-gradient hover:mb-bg-gradient-hover active:mb-bg-gradient-active text-white hover:ring-primary-100 active:ring-primary-200',
 	};
-	const noBorderOverride = 'hover:ring-white active:ring-white';
+	const noBorderOverride = 'hover:ring-white';
 	return (
 		<button
 			onClick={onClick}
