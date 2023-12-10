@@ -5,23 +5,42 @@ import { HeartIcon } from '../icons';
 interface LikeButtonProps {
 	count: number;
 	isAlreadyLiked: boolean;
+	labels: {
+		zero: string;
+		transition: string;
+		singular: string;
+		plural: string;
+	};
 	onClick: () => void;
 }
 
-const getLikesText = (count: number) => (count > 1 ? `${count} Likes` : `${count ? count + ' ' : ''}Like`);
+const getLikesText = (
+	count: number,
+	labels: { zero: string; transition: string; singular: string; plural: string },
+) => {
+	if (count === 0) {
+		return labels.zero;
+	} else if (count === -1) {
+		return labels.transition;
+	} else if (count === 1) {
+		return `${count} ${labels.singular}`;
+	} else {
+		return `${count} ${labels.plural}`;
+	}
+};
 
-export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, onClick }) => {
+export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, labels, onClick }) => {
 	const [isLiked, setIsLiked] = useState(isAlreadyLiked);
-	const [label, setLabel] = useState(getLikesText(count));
+	const [label, setLabel] = useState(getLikesText(count, labels));
 	const [disabled, setDisabled] = useState(false);
 
 	useEffect(() => {
 		if (isLiked && !isAlreadyLiked) {
 			setDisabled(true);
-			setLabel('Liked');
+			setLabel(getLikesText(-1, labels));
 
 			const timer = setTimeout(() => {
-				setLabel(getLikesText(count));
+				setLabel(getLikesText(count, labels));
 				setDisabled(false);
 			}, 1500);
 
@@ -32,6 +51,11 @@ export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, o
 			};
 		}
 	}, [isLiked]);
+
+	useEffect(() => {
+		setIsLiked(isAlreadyLiked);
+		setLabel(getLikesText(count, labels));
+	}, [count, isAlreadyLiked, labels]);
 
 	const handleLikeClick = () => {
 		if (!disabled) {

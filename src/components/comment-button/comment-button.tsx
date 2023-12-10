@@ -5,17 +5,30 @@ import { ReplyIcon } from '../icons';
 interface CommentButtonProps {
 	count: number;
 	hasCommented: boolean;
-	onClick: () => void; // This should be updated in the parent component to handle state changes
+	labels: {
+		zero: string;
+		singular: string;
+		plural: string;
+	};
+	onClick: () => void;
 }
 
-const getCommentText = (count: number) => (count > 1 ? `${count} Comments` : `${count ? count + ' ' : ''}Comment`);
+const getCommentText = (count: number, labels: { zero: string; singular: string; plural: string }) => {
+	if (count === 0) {
+		return labels.zero;
+	} else if (count === 1) {
+		return `${count} ${labels.singular}`;
+	} else {
+		return `${count} ${labels.plural}`;
+	}
+};
 
-export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommented, onClick }) => {
-	const label = getCommentText(count);
+export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommented, labels, onClick }) => {
+	const label = getCommentText(count, labels);
 
 	const handleCommentClick = () => {
 		if (!hasCommented) {
-			onClick(); // This should update the count and hasCommented state in the parent component
+			onClick();
 		}
 	};
 
