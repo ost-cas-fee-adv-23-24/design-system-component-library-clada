@@ -1,7 +1,7 @@
 import React, { FC, ReactElement, useState } from 'react';
 import classnames from 'classnames';
 
-export interface ToggleProps {
+export type ToggleProps = {
 	label: string;
 	isToggled: boolean;
 	onClick: () => void;
@@ -11,7 +11,7 @@ export interface ToggleProps {
 	toggledIcon?: ReactElement;
 	hoveredIcon?: ReactElement;
 	disabled?: boolean;
-}
+};
 
 export const Toggle: FC<ToggleProps> = ({
 	label,

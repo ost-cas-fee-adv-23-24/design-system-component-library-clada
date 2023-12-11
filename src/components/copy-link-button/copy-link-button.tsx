@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Toggle } from '../toggle/toggle';
 import { ShareIcon } from '../icons';
 
-interface CopyLinkProps {
+export type CopyLinkProps = {
 	labels: {
 		default: string;
 		active: string;
 	};
 	onClick: () => void;
-}
+};
+
+let timer: NodeJS.Timeout;
 
 export const CopyLinkButton: React.FC<CopyLinkProps> = ({ labels, onClick }) => {
 	const [isCopied, setIsCopied] = useState(false);
@@ -20,8 +22,9 @@ export const CopyLinkButton: React.FC<CopyLinkProps> = ({ labels, onClick }) => 
 			setDisabled(true);
 			setLabel(labels.active);
 
-			const timer = setTimeout(() => {
+			timer = setTimeout(() => {
 				setLabel(labels.default);
+
 				setDisabled(false);
 				setIsCopied(false);
 			}, 1500);

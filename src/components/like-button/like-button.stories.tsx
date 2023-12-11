@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react';
 import LikeButton from './like-button';
 
 const meta: Meta<typeof LikeButton> = {
-	title: 'Components/LikeButton',
+	title: 'Components/Buttons/LikeButton',
 	component: LikeButton,
 	tags: ['autodocs'],
 	parameters: {

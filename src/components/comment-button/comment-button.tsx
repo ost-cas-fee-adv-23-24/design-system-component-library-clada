@@ -2,7 +2,7 @@ import React from 'react';
 import { Toggle } from '../toggle/toggle';
 import { ReplyIcon } from '../icons';
 
-interface CommentButtonProps {
+export type CommentButtonProps = {
 	count: number;
 	hasCommented: boolean;
 	labels: {
@@ -11,7 +11,7 @@ interface CommentButtonProps {
 		plural: string;
 	};
 	onClick: () => void; // This should update the count and hasCommented state in the parent component
-}
+};
 
 const getCommentText = (count: number, labels: { zero: string; singular: string; plural: string }) => {
 	if (count === 0) {

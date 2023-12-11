@@ -29,6 +29,7 @@ module.exports = {
 	rules: {
 		// disable rule because of forwarding refs
 		// based on following thread: https://github.com/jsx-eslint/eslint-plugin-react/issues/2269
-		'react/display-name': 'off'
+		'react/display-name': 'off',
+		'react/prop-types': 'off',
 	},
 };
