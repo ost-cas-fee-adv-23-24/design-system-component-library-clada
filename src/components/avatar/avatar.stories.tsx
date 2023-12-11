@@ -72,7 +72,6 @@ export const Medium: AvatarStory = {
 	render: AvatarTemplate,
 	args: {
 		size: 'm',
-		ImageComponent: ImageComponent,
 		onClick: () => console.log('Avatar clicked'),
 	},
 };
@@ -101,7 +100,6 @@ export const ExtraLarge: AvatarStory = {
 export const Editable: AvatarEditStory = {
 	render: AvatarEditTemplate,
 	args: {
-		ImageComponent: ImageComponent,
 		hoverEffect: 'none',
 		onClick: () => console.log('Avatar clicked'),
 		editOnClick: () => console.log('Edit clicked'),
