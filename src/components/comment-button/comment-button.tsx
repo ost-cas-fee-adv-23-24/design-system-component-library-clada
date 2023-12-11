@@ -5,14 +5,13 @@ import { ReplyIcon } from '../icons';
 export type CommentButtonProps = {
 	count: number;
 	hasCommented: boolean;
-};
 	labels: {
 		zero: string;
 		singular: string;
 		plural: string;
 	};
 	onClick: () => void; // This should update the count and hasCommented state in the parent component
-}
+};
 
 const getCommentText = (count: number, labels: { zero: string; singular: string; plural: string }) => {
 	if (count === 0) {
