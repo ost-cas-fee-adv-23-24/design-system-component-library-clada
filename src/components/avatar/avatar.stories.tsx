@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import Avatar, { AvatarProps } from './avatar';
-import AvatarEdit from './avatar-edit';
+import { Avatar, AvatarProps } from './avatar';
+import { AvatarEdit } from './avatar-edit';
 
 const meta: Meta<typeof Avatar | typeof AvatarEdit> = {
 	title: 'Components/Avatar',
@@ -50,10 +50,6 @@ type AvatarStory = StoryObj<AvatarProps>;
 type AvatarEditProps = Parameters<typeof AvatarEdit>[0]; // Extract props type for AvatarEdit
 type AvatarEditStory = StoryObj<AvatarEditProps>;
 
-const ImageComponent = () => (
-	<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d" alt="User Avatar" />
-);
-
 const AvatarTemplate: AvatarStory['render'] = (args) => <Avatar {...args} />;
 
 const AvatarEditTemplate: AvatarEditStory['render'] = (args) => <AvatarEdit {...args} />;
@@ -63,7 +59,6 @@ export const Small: AvatarStory = {
 	args: {
 		size: 's',
 		noBorder: true,
-		ImageComponent: ImageComponent,
 		onClick: () => console.log('Avatar clicked'),
 	},
 };
@@ -80,7 +75,6 @@ export const Large: AvatarStory = {
 	render: AvatarTemplate,
 	args: {
 		size: 'l',
-		ImageComponent: ImageComponent,
 		onClick: () => console.log('Avatar clicked'),
 		hoverEffect: 'all',
 	},
@@ -90,7 +84,6 @@ export const ExtraLarge: AvatarStory = {
 	render: AvatarTemplate,
 	args: {
 		size: 'xl',
-		ImageComponent: ImageComponent,
 		onClick: () => console.log('Avatar clicked'),
 		borderColor: 'white',
 		hoverEffect: 'none',
@@ -100,8 +93,18 @@ export const ExtraLarge: AvatarStory = {
 export const Editable: AvatarEditStory = {
 	render: AvatarEditTemplate,
 	args: {
-		hoverEffect: 'none',
 		onClick: () => console.log('Avatar clicked'),
 		editOnClick: () => console.log('Edit clicked'),
+	},
+};
+
+export const WithExampleImage: AvatarStory = {
+	render: AvatarTemplate,
+	args: {
+		size: 'm',
+		imageProps: {
+			src: 'https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg',
+			alt: 'Avatar Image',
+		},
 	},
 };
