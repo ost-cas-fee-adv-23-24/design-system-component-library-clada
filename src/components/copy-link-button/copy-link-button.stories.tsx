@@ -31,6 +31,12 @@ The CopyLinkButton is ideal for use in scenarios where users need to copy URLs o
 
 export default meta;
 
-export const ShareButton = {
-	args: { onClick: () => console.log('copy link button clicked') },
+export const CopyLink = {
+	args: {
+		labels: {
+			default: 'Copy Link',
+			active: 'Link copied',
+		},
+		onClick: () => console.log('copy link button clicked'),
+	},
 };
