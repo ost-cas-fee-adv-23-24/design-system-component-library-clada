@@ -25,5 +25,3 @@ export const LogoutIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default LogoutIcon;

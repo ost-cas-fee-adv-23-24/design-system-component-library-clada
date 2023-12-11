@@ -21,5 +21,3 @@ export const LocationIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default LocationIcon;

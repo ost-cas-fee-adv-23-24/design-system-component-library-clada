@@ -18,5 +18,3 @@ export const ProfileIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default ProfileIcon;

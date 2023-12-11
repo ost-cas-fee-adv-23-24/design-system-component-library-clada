@@ -21,5 +21,3 @@ export const RepostIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default RepostIcon;

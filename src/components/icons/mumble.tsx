@@ -33,5 +33,3 @@ export const MumbleIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default MumbleIcon;

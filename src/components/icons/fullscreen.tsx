@@ -25,5 +25,3 @@ export const FullscreenIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default FullscreenIcon;

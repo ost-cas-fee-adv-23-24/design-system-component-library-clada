@@ -80,5 +80,3 @@ export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, l
 		/>
 	);
 };
-
-export default LikeButton;

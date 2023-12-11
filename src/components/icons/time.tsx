@@ -25,5 +25,3 @@ export const TimeIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default TimeIcon;

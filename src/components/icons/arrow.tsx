@@ -34,5 +34,3 @@ export const ArrowIcon: FC<RotatableIconProps> = ({ size, color, direction }) =>
 		</svg>
 	);
 };
-
-export default ArrowIcon;

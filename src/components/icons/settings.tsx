@@ -21,5 +21,3 @@ export const SettingsIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default SettingsIcon;
