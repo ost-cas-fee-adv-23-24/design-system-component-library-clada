@@ -40,11 +40,11 @@ export const Avatar: React.FC<AvatarProps> = ({
 	}`;
 
 	return (
-		<div
+		<figure
 			className={`transition-border-radius cursor-pointer overflow-hidden rounded-full bg-primary-200 duration-100 ease-out ${borderClasses} ${colorClasses} ${sizeClasses[size]} ${hoverBorderClasses}`}
 			onClick={handleOnClick}>
 			<ImageComponent className={imageClasses} />
-		</div>
+		</figure>
 	);
 };
 
