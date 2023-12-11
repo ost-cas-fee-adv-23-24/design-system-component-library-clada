@@ -6,6 +6,8 @@ export type CopyLinkProps = {
 	onClick: () => void;
 };
 
+let timer: NodeJS.Timeout;
+
 export const CopyLinkButton: React.FC<CopyLinkProps> = ({ onClick }) => {
 	const defaultLabel = 'Copy Link';
 	const activeLabel = 'Link copied';
@@ -19,7 +21,7 @@ export const CopyLinkButton: React.FC<CopyLinkProps> = ({ onClick }) => {
 			setDisabled(true);
 			setLabel(activeLabel);
 
-			const timer = setTimeout(() => {
+			timer = setTimeout(() => {
 				setLabel(defaultLabel);
 				setDisabled(false);
 				setIsCopied(false);

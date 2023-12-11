@@ -10,6 +10,8 @@ interface LikeButtonProps {
 
 const getLikesText = (count: number) => (count > 1 ? `${count} Likes` : `${count ? count + ' ' : ''}Like`);
 
+let timer: NodeJS.Timeout;
+
 export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, onClick }) => {
 	const [isLiked, setIsLiked] = useState(isAlreadyLiked);
 	const [label, setLabel] = useState(getLikesText(count));
@@ -20,7 +22,7 @@ export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, o
 			setDisabled(true);
 			setLabel('Liked');
 
-			const timer = setTimeout(() => {
+			timer = setTimeout(() => {
 				setLabel(getLikesText(count));
 				setDisabled(false);
 			}, 1500);
