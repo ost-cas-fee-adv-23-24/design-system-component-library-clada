@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Toggle } from '../toggle/toggle';
 import { ShareIcon } from '../icons';
 
-
 export type CopyLinkProps = {
 	labels: {
 		default: string;
@@ -23,7 +22,7 @@ export const CopyLinkButton: React.FC<CopyLinkProps> = ({ labels, onClick }) => 
 			setDisabled(true);
 			setLabel(labels.active);
 
-			  timer = setTimeout(() => {
+			timer = setTimeout(() => {
 				setLabel(labels.default);
 
 				setDisabled(false);
