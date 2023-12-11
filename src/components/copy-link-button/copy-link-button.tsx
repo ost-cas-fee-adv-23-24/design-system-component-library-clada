@@ -3,24 +3,25 @@ import { Toggle } from '../toggle/toggle';
 import { ShareIcon } from '../icons';
 
 interface CopyLinkProps {
+	labels: {
+		default: string;
+		active: string;
+	};
 	onClick: () => void;
 }
 
-export const CopyLinkButton: React.FC<CopyLinkProps> = ({ onClick }) => {
-	const defaultLabel = 'Copy Link';
-	const activeLabel = 'Link copied';
-
+export const CopyLinkButton: React.FC<CopyLinkProps> = ({ labels, onClick }) => {
 	const [isCopied, setIsCopied] = useState(false);
-	const [label, setLabel] = useState(defaultLabel);
+	const [label, setLabel] = useState(labels.default);
 	const [disabled, setDisabled] = useState(false);
 
 	useEffect(() => {
 		if (isCopied) {
 			setDisabled(true);
-			setLabel(activeLabel);
+			setLabel(labels.active);
 
 			const timer = setTimeout(() => {
-				setLabel(defaultLabel);
+				setLabel(labels.default);
 				setDisabled(false);
 				setIsCopied(false);
 			}, 1500);

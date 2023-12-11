@@ -38,6 +38,12 @@ export const DefaultLikeButton = {
 	args: {
 		count: 0,
 		isAlreadyLiked: false,
+		labels: {
+			zero: 'Like',
+			transition: 'Liked',
+			singular: 'Like',
+			plural: 'Likes',
+		},
 		onClick: () => console.log('like button clicked'),
 	},
 };
@@ -46,6 +52,12 @@ export const LikeButtonWithInitialLikes = {
 	args: {
 		count: 5,
 		isAlreadyLiked: true,
+		labels: {
+			zero: 'Like',
+			transition: 'Liked',
+			singular: 'Like',
+			plural: 'Likes',
+		},
 		onClick: () => console.log('like button clicked'),
 	},
 };

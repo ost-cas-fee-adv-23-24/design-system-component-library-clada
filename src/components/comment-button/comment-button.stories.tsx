@@ -38,6 +38,11 @@ export const DefaultCommentButton = {
 	args: {
 		count: 0,
 		hasCommented: false,
+		labels: {
+			zero: 'Comment',
+			singular: 'Comment',
+			plural: 'Comments',
+		},
 		onClick: () => console.log('comment button clicked'),
 	},
 };
@@ -46,6 +51,11 @@ export const CommentButtonWithInitialComments = {
 	args: {
 		count: 5,
 		hasCommented: true,
+		labels: {
+			zero: 'Comment',
+			singular: 'Comment',
+			plural: 'Comments',
+		},
 		onClick: () => console.log('comment button clicked'),
 	},
 };
