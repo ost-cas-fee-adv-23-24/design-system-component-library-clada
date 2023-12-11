@@ -50,8 +50,8 @@ type AvatarStory = StoryObj<AvatarProps>;
 type AvatarEditProps = Parameters<typeof AvatarEdit>[0]; // Extract props type for AvatarEdit
 type AvatarEditStory = StoryObj<AvatarEditProps>;
 
-const ImageComponent = ({ className }) => (
-	<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d" alt="User Avatar" className={className} />
+const ImageComponent = () => (
+	<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d" alt="User Avatar" />
 );
 
 const AvatarTemplate: AvatarStory['render'] = (args) => <Avatar {...args} />;
