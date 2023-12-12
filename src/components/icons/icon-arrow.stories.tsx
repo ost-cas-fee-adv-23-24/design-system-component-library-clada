@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import ArrowIcon from './arrow';
+import { ArrowIcon } from './arrow';
 import { RotatableIconProps } from './iconUtils';
 
 export default {

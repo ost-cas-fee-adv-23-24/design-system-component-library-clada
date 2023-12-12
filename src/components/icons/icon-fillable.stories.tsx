@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import HeartIcon from './heart';
-import ReplyIcon from './reply';
+import { HeartIcon } from './heart';
+import { ReplyIcon } from './reply';
 import { FillableIconProps } from './iconUtils';
 
 export default {
