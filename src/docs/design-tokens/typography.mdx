@@ -1,0 +1,45 @@
+import { Meta, Unstyled } from '@storybook/blocks';
+
+<Meta title="Foundation/Typography" />
+
+# Typography
+
+This section outlines the typography guidelines and standards for our design system.
+The available typography uses [Poppins](https://fonts.google.com/specimen/Poppins?query=Poppins) as the primary font
+and `Arial*` as its fallback.
+
+`Poppins` is imported in the source files and therefore also available in the packages out of the box.
+
+Every font can be selected with `mb-font-*`
+
+## Tokens
+
+- `mb-font-h1`
+- `mb-font-h2`
+- `mb-font-h3`
+- `mb-font-h4`
+- `mb-font-paragraph-l`
+- `mb-font-paragraph-m`
+- `mb-font-label-xl`
+- `mb-font-label-l`
+- `mb-font-label-m`
+- `mb-font-label-s`
+- `mb-font-placeholder`
+
+## Visualisation
+
+<Unstyled>
+	<div className="grid gap-xs">
+		<h1 className="mb-font-h1">Heading H1</h1>
+		<h2 className="mb-font-h2">Heading H2</h2>
+		<h3 className="mb-font-h3">Heading H3</h3>
+		<h4 className="mb-font-h4">Heading H4</h4>
+		<p className="mb-font-paragraph-l">Paragraph L</p>
+		<p className="mb-font-paragraph-m">Paragraph M</p>
+		<p className="mb-font-label-xl">Label XL</p>
+		<p className="mb-font-label-l">Label L</p>
+		<p className="mb-font-label-m">Label M</p>
+		<p className="mb-font-label-s">Label S</p>
+		<p className="mb-font-placeholder">Placeholder</p>
+	</div>
+</Unstyled>
