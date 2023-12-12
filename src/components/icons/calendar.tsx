@@ -27,5 +27,3 @@ export const CalendarIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default CalendarIcon;

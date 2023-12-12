@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react';
-import CommentButton from './comment-button';
+import { CommentButton } from './comment-button';
 
 const meta: Meta<typeof CommentButton> = {
 	title: 'Components/Buttons/CommentButton',

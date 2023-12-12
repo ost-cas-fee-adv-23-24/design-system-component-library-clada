@@ -14,5 +14,3 @@ export const CheckIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default CheckIcon;

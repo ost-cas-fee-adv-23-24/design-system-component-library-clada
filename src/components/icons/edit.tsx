@@ -31,5 +31,3 @@ export const EditIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default EditIcon;

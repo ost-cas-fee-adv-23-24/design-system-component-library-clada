@@ -1,19 +1,19 @@
 import React, { FC } from 'react';
-import CheckIcon from './check';
-import CancelIcon from './cancel';
-import RepostIcon from './repost';
-import TimeIcon from './time';
-import MumbleIcon from './mumble';
-import FullscreenIcon from './fullscreen';
-import SendIcon from './send';
-import EditIcon from './edit';
-import LocationIcon from './location';
-import ShareIcon from './share';
-import ProfileIcon from './profile';
-import EyeIcon from './eye';
-import SettingsIcon from './settings';
-import LogoutIcon from './logout';
-import CalendarIcon from './calendar';
+import { CheckIcon } from './check';
+import { CancelIcon } from './cancel';
+import { RepostIcon } from './repost';
+import { TimeIcon } from './time';
+import { MumbleIcon } from './mumble';
+import { FullscreenIcon } from './fullscreen';
+import { SendIcon } from './send';
+import { EditIcon } from './edit';
+import { LocationIcon } from './location';
+import { ShareIcon } from './share';
+import { ProfileIcon } from './profile';
+import { EyeIcon } from './eye';
+import { SettingsIcon } from './settings';
+import { LogoutIcon } from './logout';
+import { CalendarIcon } from './calendar';
 import { IconProps } from './iconUtils';
 
 export const iconComponents = {

@@ -46,5 +46,3 @@ export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommente
 		/>
 	);
 };
-
-export default CommentButton;

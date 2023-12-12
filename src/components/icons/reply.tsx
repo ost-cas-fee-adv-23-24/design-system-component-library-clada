@@ -30,5 +30,3 @@ export const ReplyIcon: FC<FillableIconProps> = ({ size, color, filled }) => {
 		</svg>
 	);
 };
-
-export default ReplyIcon;

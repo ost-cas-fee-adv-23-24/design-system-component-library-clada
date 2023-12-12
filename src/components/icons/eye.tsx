@@ -25,5 +25,3 @@ export const EyeIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default EyeIcon;

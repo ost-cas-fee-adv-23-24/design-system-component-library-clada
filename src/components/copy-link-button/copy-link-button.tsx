@@ -55,5 +55,3 @@ export const CopyLinkButton: React.FC<CopyLinkProps> = ({ labels, onClick }) => 
 		/>
 	);
 };
-
-export default CopyLinkButton;

@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react';
-import CopyLinkButton from './copy-link-button';
+import { CopyLinkButton } from './copy-link-button';
 
 const meta: Meta<typeof CopyLinkButton> = {
 	title: 'Components/Buttons/CopyLinkButton',

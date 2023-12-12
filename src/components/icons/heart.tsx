@@ -30,5 +30,3 @@ export const HeartIcon: FC<FillableIconProps> = ({ size, color, filled }) => {
 		</svg>
 	);
 };
-
-export default HeartIcon;

@@ -14,5 +14,3 @@ export const CancelIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default CancelIcon;

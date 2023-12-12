@@ -21,5 +21,3 @@ export const SendIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default SendIcon;

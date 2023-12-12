@@ -14,5 +14,3 @@ export const ShareIcon: FC<IconProps> = ({ size, color }) => {
 		</svg>
 	);
 };
-
-export default ShareIcon;
