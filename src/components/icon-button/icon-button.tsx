@@ -38,7 +38,7 @@ export const IconButton = <
 			/* eslint-disable-next-line */
 			{...(props as any)}
 			className={classnames(' flex items-center gap-xxs transition-colors duration-300 mb-font-label-s', colorClasses)}>
-			{<Icon size={'s'} color={'inherit'} />}
+			{<Icon size={'xs'} color={'inherit'} />}
 			<span>{children}</span>
 		</LinkComponent>
 	);
