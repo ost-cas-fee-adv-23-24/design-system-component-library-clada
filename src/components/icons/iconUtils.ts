@@ -1,5 +1,7 @@
-export const getSizeClass = (size?: 's' | 'm' | 'l') => {
+export const getSizeClass = (size?: 'xs' | 's' | 'm' | 'l') => {
 	switch (size) {
+		case 'xs':
+			return 'w-s h-s pl-xxs -ml-xxs';
 		case 's':
 			return 'w-s h-s';
 		case 'm':
@@ -31,7 +33,7 @@ export const getColorClass = (color?: 'base' | 'white' | 'primary' | 'secondary'
 };
 
 export interface IconProps {
-	size?: 's' | 'm' | 'l';
+	size?: 'xs' | 's' | 'm' | 'l';
 	color?: 'base' | 'white' | 'primary' | 'secondary' | 'error' | 'inherit';
 }
 
