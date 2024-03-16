@@ -1,3 +1,5 @@
+'use client';
+
 import React, { FC } from 'react';
 import classnames from 'classnames';
 import { motion } from 'framer-motion';
@@ -25,10 +27,13 @@ export const Logo: FC<LogoProps> = ({ variant = 'primary', href }) => {
 	});
 
 	return (
-		<motion.a href={href} className="group flex flex-col gap-s sm:items-center md:flex-row md:gap-m" whileHover="hover">
+		<motion.a
+			href={href}
+			className="group flex flex-col gap-xs sm:items-center md:flex-row md:gap-s"
+			whileHover="hover">
 			<motion.svg
-				width="64"
-				height="64"
+				width="40"
+				height="40"
 				viewBox="0 0 64 64"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +46,7 @@ export const Logo: FC<LogoProps> = ({ variant = 'primary', href }) => {
 					<path d="M42.4505 20.4714C40.2682 20.4714 37.4245 21.4089 36.2839 25.875C35.6823 28.2292 35.8906 29.5911 38.2969 33.013C40.3802 35.9818 42.9662 39.0157 46.3333 39.0157C47.5938 39.0157 48.8021 38.4636 49.8307 37.4219C51.2969 35.9349 52.1849 33.6458 52.1536 31.4505C52.1016 27.7891 47.8724 20.4714 42.4505 20.4714Z" />
 				</g>
 			</motion.svg>
-			<span className={classnames('hidden mb-font-h1 sm:block', textClasses)}>Mumble</span>
+			<span className={classnames('hidden mb-font-h2 sm:block', textClasses)}>Mumble</span>
 		</motion.a>
 	);
 };
