@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"declarationDir": "dist/types",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"declaration": true,
+		"forceConsistentCasingInFileNames": true,
+		"rootDir": "src/",
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"jsx": "react"
+	},
+	"exclude": ["node_modules", "**/*.stories.tsx"],
+	"include": ["src/index.ts", "../package.json", "../README.md"]
+}
