@@ -27,10 +27,7 @@ export const Logo: FC<LogoProps> = ({ variant = 'primary', href }) => {
 	});
 
 	return (
-		<motion.a
-			href={href}
-			className="group flex flex-col gap-xs sm:items-center md:flex-row md:gap-s"
-			whileHover="hover">
+		<motion.a href={href} className="group flex gap-s  sm:items-center" whileHover="hover">
 			<motion.svg
 				width="40"
 				height="40"
