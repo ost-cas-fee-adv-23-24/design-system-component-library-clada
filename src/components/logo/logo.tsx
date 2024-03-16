@@ -1,3 +1,5 @@
+'use client';
+
 import React, { FC } from 'react';
 import classnames from 'classnames';
 import { motion } from 'framer-motion';
