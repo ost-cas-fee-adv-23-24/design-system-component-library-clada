@@ -1,3 +1,5 @@
+'use client';
+
 import React, { FC, Fragment, ReactNode } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import classNames from 'classnames';
