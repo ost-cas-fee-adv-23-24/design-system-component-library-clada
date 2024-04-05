@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Toggle } from '../toggle/toggle';
 import { HeartIcon } from '../icons';
 
 interface LikeButtonProps {
 	count: number;
 	isAlreadyLiked: boolean;
+	isDisabled?: boolean;
 	labels: {
 		zero: string;
 		transition: string;
@@ -31,10 +32,16 @@ const getLikesText = (
 
 let timer: NodeJS.Timeout;
 
-export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, labels, onClick }) => {
+export const LikeButton: React.FC<LikeButtonProps> = ({
+	count,
+	isAlreadyLiked,
+	isDisabled = false,
+	labels,
+	onClick,
+}) => {
 	const [isLiked, setIsLiked] = useState(isAlreadyLiked);
 	const [label, setLabel] = useState(getLikesText(count, labels));
-	const [disabled, setDisabled] = useState(false);
+	const [disabled, setDisabled] = useState(isDisabled);
 
 	useEffect(() => {
 		if (isLiked && !isAlreadyLiked) {
@@ -44,6 +51,7 @@ export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, l
 			timer = setTimeout(() => {
 				setLabel(getLikesText(count, labels));
 				setDisabled(false);
+				onClick();
 			}, 1500);
 
 			return () => {
@@ -51,8 +59,14 @@ export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, l
 					clearTimeout(timer);
 				}
 			};
+		} else if (!isLiked && isAlreadyLiked) {
+			onClick();
 		}
 	}, [isLiked]);
+
+	useEffect(() => {
+		setDisabled(isDisabled);
+	}, [isDisabled]);
 
 	useEffect(() => {
 		setIsLiked(isAlreadyLiked);
@@ -62,7 +76,6 @@ export const LikeButton: React.FC<LikeButtonProps> = ({ count, isAlreadyLiked, l
 	const handleLikeClick = () => {
 		if (!disabled) {
 			setIsLiked(!isLiked);
-			onClick();
 		}
 	};
 
