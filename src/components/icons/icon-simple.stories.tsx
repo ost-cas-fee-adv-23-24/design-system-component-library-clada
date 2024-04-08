@@ -14,6 +14,7 @@ import { EyeIcon } from './eye';
 import { SettingsIcon } from './settings';
 import { LogoutIcon } from './logout';
 import { CalendarIcon } from './calendar';
+import { UploadIcon } from './upload';
 import { IconProps } from './iconUtils';
 
 export const iconComponents = {
@@ -32,6 +33,7 @@ export const iconComponents = {
 	Settings: SettingsIcon,
 	Logout: LogoutIcon,
 	Calendar: CalendarIcon,
+	Upload: UploadIcon,
 };
 
 const defaultArgs: IconProps = {
@@ -60,6 +62,7 @@ export const Eye = createTemplate(iconComponents.Eye);
 export const Settings = createTemplate(iconComponents.Settings);
 export const Logout = createTemplate(iconComponents.Logout);
 export const Calendar = createTemplate(iconComponents.Calendar);
+export const Upload = createTemplate(iconComponents.Upload);
 
 export default {
 	title: 'Components/Icons',
