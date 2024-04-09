@@ -16,3 +16,4 @@ export { CalendarIcon } from './calendar';
 export { HeartIcon } from './heart';
 export { ReplyIcon } from './reply';
 export { ArrowIcon } from './arrow';
+export { UploadIcon } from './upload';

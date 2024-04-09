@@ -13,3 +13,4 @@ export { AvatarEdit } from './avatar';
 export { LikeButton } from './like-button';
 export { CopyLinkButton } from './copy-link-button';
 export { CommentButton } from './comment-button';
+export { Toggle } from './toggle';

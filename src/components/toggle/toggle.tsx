@@ -1,5 +1,6 @@
-import React, { FC, ReactElement, useState } from 'react';
 import classnames from 'classnames';
+import React from 'react';
+import { FC, ReactElement, useState } from 'react';
 
 export type ToggleProps = {
 	label: string;
