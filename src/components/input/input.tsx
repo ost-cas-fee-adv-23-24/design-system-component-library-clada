@@ -8,6 +8,7 @@ export interface InputProps extends ComponentPropsWithRef<'input'> {
 	id: string;
 	type: 'text' | 'mail' | 'password';
 	label: string;
+	name?: string;
 	placeholder?: string;
 	onChange?: (ev: ChangeEvent) => void;
 	error?: string;
@@ -25,6 +26,7 @@ export const Input: FC<InputProps> = ({
 	Icon,
 	onIconClick,
 	ref,
+	name,
 	defaultValue,
 }) => {
 	const iconPosition = 'absolute right-s top-1/2 -translate-y-1/2';
@@ -37,6 +39,7 @@ export const Input: FC<InputProps> = ({
 			<div className={'relative w-full'}>
 				<input
 					id={id}
+					name={name}
 					ref={ref}
 					className={classnames(
 						'mb-font-placeholder-m w-full bg-base-50 text-base-900 placeholder-base-500',
