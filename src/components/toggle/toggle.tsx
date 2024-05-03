@@ -12,6 +12,7 @@ export type ToggleProps = {
 	toggledIcon?: ReactElement;
 	hoveredIcon?: ReactElement;
 	disabled?: boolean;
+	testid?: string;
 };
 
 export const Toggle: FC<ToggleProps> = ({
@@ -24,6 +25,7 @@ export const Toggle: FC<ToggleProps> = ({
 	toggledIcon,
 	hoveredIcon,
 	disabled,
+	testid,
 }) => {
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -67,7 +69,8 @@ export const Toggle: FC<ToggleProps> = ({
 			onClick={handleToggle}
 			onMouseOver={() => setIsHovered(!disabled && !isToggled)}
 			onMouseOut={() => setIsHovered(false)}
-			className={classnames(baseClasses, colorClasses[color], disabled ? 'cursor-default' : '')}>
+			className={classnames(baseClasses, colorClasses[color], disabled ? 'cursor-default' : '')}
+			data-testid={testid}>
 			{renderIcon()}
 			<span className={getLabelClasses()}>{label}</span>
 		</button>

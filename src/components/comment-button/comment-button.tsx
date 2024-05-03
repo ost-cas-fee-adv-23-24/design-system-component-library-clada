@@ -11,6 +11,7 @@ export type CommentButtonProps = {
 		plural: string;
 	};
 	onClick: () => void; // This should update the count and hasCommented state in the parent component
+	testid?: string;
 };
 
 const getCommentText = (count: number, labels: { zero: string; singular: string; plural: string }) => {
@@ -23,7 +24,7 @@ const getCommentText = (count: number, labels: { zero: string; singular: string;
 	}
 };
 
-export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommented, labels, onClick }) => {
+export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommented, labels, onClick, testid }) => {
 	const label = getCommentText(count, labels);
 
 	const handleCommentClick = () => {
@@ -43,6 +44,7 @@ export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommente
 			icon={<ReplyIcon size="s" color="base" />}
 			hoveredIcon={<ReplyIcon size="s" color="primary" />}
 			toggledIcon={<ReplyIcon size="s" color="primary" filled={true} />}
+			testid={testid}
 		/>
 	);
 };

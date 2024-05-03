@@ -8,11 +8,12 @@ export type CopyLinkProps = {
 		active: string;
 	};
 	onClick: () => void;
+	testid?: string;
 };
 
 let timer: NodeJS.Timeout;
 
-export const CopyLinkButton: React.FC<CopyLinkProps> = ({ labels, onClick }) => {
+export const CopyLinkButton: React.FC<CopyLinkProps> = ({ labels, onClick, testid }) => {
 	const [isCopied, setIsCopied] = useState(false);
 	const [label, setLabel] = useState(labels.default);
 	const [disabled, setDisabled] = useState(false);
@@ -52,6 +53,7 @@ export const CopyLinkButton: React.FC<CopyLinkProps> = ({ labels, onClick }) => 
 			color="base"
 			disabled={disabled}
 			icon={<ShareIcon size="s" color="base" />}
+			testid={testid}
 		/>
 	);
 };

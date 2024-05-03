@@ -10,9 +10,10 @@ export type ButtonProps = {
 	size: 'm' | 'l';
 	Icon?: ComponentType<IconProps>;
 	noLabel?: boolean;
+	testid?: string;
 };
 
-export const Button: FC<ButtonProps> = ({ label, onClick, color, noBorder = false, size, Icon, noLabel }) => {
+export const Button: FC<ButtonProps> = ({ label, onClick, color, noBorder = false, size, Icon, noLabel, testid }) => {
 	const baseClasses = `leading-none text-base transition-all duration-300 hover:ring active:ring-4 focus:outline-none flex items-center justify-center`;
 	const sizeClasses = size === 'l' || noLabel ? 'px-m py-s' : 'p-3';
 	const colorClasses = {
@@ -32,7 +33,8 @@ export const Button: FC<ButtonProps> = ({ label, onClick, color, noBorder = fals
 				colorClasses[color],
 				noBorder ? noBorderOverride : '',
 				noLabel ? 'rounded-full px-s' : 'w-full rounded-s',
-			)}>
+			)}
+			data-testid={testid}>
 			{!noLabel && <span className={Icon ? (size === 'l' ? 'mr-3' : 'mr-xs') : ''}>{label}</span>}
 			{Icon && <Icon size="s" color="white" />}
 		</button>
