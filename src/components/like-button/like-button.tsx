@@ -92,7 +92,7 @@ export const LikeButton: React.FC<LikeButtonProps> = ({
 			icon={<HeartIcon size="s" color="base" />}
 			hoveredIcon={<HeartIcon size="s" color="secondary" />}
 			toggledIcon={<HeartIcon size="s" color="secondary" filled={true} />}
-			data-testid={testid}
+			testid={testid}
 		/>
 	);
 };
