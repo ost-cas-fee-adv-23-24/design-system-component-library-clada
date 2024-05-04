@@ -13,6 +13,7 @@ interface LikeButtonProps {
 		plural: string;
 	};
 	onClick: () => void;
+	testid?: string;
 }
 
 const getLikesText = (
@@ -38,6 +39,7 @@ export const LikeButton: React.FC<LikeButtonProps> = ({
 	isDisabled = false,
 	labels,
 	onClick,
+	testid,
 }) => {
 	const [isLiked, setIsLiked] = useState(isAlreadyLiked);
 	const [label, setLabel] = useState(getLikesText(count, labels));
@@ -90,6 +92,7 @@ export const LikeButton: React.FC<LikeButtonProps> = ({
 			icon={<HeartIcon size="s" color="base" />}
 			hoveredIcon={<HeartIcon size="s" color="secondary" />}
 			toggledIcon={<HeartIcon size="s" color="secondary" filled={true} />}
+			data-testid={testid}
 		/>
 	);
 };
