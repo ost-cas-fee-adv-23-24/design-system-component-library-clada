@@ -39,7 +39,6 @@ export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommente
 			isToggled={hasCommented}
 			onClick={handleCommentClick}
 			color="primary"
-			disabled={hasCommented}
 			useToggledColor={false}
 			icon={<ReplyIcon size="s" color="base" />}
 			hoveredIcon={<ReplyIcon size="s" color="primary" />}
