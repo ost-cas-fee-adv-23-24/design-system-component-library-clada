@@ -28,9 +28,7 @@ export const CommentButton: React.FC<CommentButtonProps> = ({ count, hasCommente
 	const label = getCommentText(count, labels);
 
 	const handleCommentClick = () => {
-		if (!hasCommented) {
-			onClick();
-		}
+		onClick();
 	};
 
 	return (
